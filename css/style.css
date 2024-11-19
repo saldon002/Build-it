@@ -58,9 +58,9 @@ footer p {
 /* Contenuto principale */
 main {
     padding: 20px;
-    margin-bottom: 60px; /* Spazio per il footer fisso */
+    margin-bottom: 60px;
     max-width: 800px;
-    margin: 40px auto; /* Centra il contenuto */
+    margin: 40px auto;
     text-align: center;
     color: var(--text-color);
 }
