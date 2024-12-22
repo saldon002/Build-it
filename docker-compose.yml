@@ -1,0 +1,28 @@
+services:
+  # Flask application configuration
+  flask-app:
+    build: .
+    container_name: flask-app
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_APP=server/app.py
+      - FLASK_ENV=development
+    depends_on:
+      - mongodb  # MongoDB starts before the flask app
+
+  # MongoDB configuration
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+# Define volumes for persistent data
+volumes:
+  mongo-data:
