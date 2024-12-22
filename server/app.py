@@ -4,12 +4,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Serve index.html file
+    # Servi il file index.html
     return render_template('index.html')
 
 @app.route('/configuration')
 def configuration():
-    # Serve builder.html dinamic page
+    # Servi la pagina dinamica configuration.html
     return render_template('configuration.html')
 
 if __name__ == '__main__':
