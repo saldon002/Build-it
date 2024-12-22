@@ -1,0 +1,2 @@
+# List of Python dependencies for the Flask application
+flask
