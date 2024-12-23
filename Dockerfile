@@ -10,10 +10,8 @@ COPY requirements.txt /app/
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code, templates, and static files into the container
-COPY server/app.py /app/server/
-COPY server/templates/ /app/server/templates/
-COPY server/static/ /app/server/static/
+# Copy all files into the container
+COPY . /app/
 
 # Set environment variables for Flask
 ENV FLASK_APP=server/app.py
