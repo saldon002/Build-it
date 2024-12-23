@@ -33,12 +33,13 @@
             MENU
           </a>
           <div class="dropdown-menu dropdown-menu-end p-0 fullscreen-menu">
+            <!-- Icona "X" per chiudere -->
+            <span class="close-menu-icon" onclick="closeMenu()">&times;</span>
             <div class="d-flex flex-column align-items-center justify-content-center vh-100">
               <a class="nav-link fs-4 mb-3 text-white" href="#">Home</a>
               <a class="nav-link fs-4 mb-3 text-white" href="#">About</a>
               <a class="nav-link fs-4 mb-3 text-white" href="#">Services</a>
               <a class="nav-link fs-4 mb-3 text-white" href="#">Contact</a>
-              <button class="btn btn-danger mt-4" onclick="closeMenu()">Close</button>
             </div>
           </div>
         </li>
@@ -47,7 +48,7 @@
   </div>
 </nav>
 
-<!--Style Navbar (Drop down Menu)-->
+<!-- Stili Navbar (Drop down Menu) -->
 <style>
   .fullscreen-menu {
     position: fixed;
@@ -72,10 +73,23 @@
     color: #ff4c29; /* Accento arancione */
     text-decoration: underline;
   }
+
+  /* Stile per l'icona di chiusura */
+  .close-menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #eaeaea;
+    cursor: pointer;
+    z-index: 1051;
+  }
+  .close-menu-icon:hover {
+    color: #ff4c29; /* Accento arancione */
+  }
 </style>
 
-
-<!-- Script additional Navbar (Drop down Menu)-->
+<!-- Script aggiuntivo per chiudere il menu -->
 <script>
   function closeMenu() {
     const dropdown = document.querySelector('.dropdown');
@@ -85,6 +99,7 @@
 
 
 <!-- Main Section and texts -->
+
 <main class="text-center mt-5">
   <div class="container">
     <img src="../static/images/favicon.png" alt="Build-it Logo" class="mb-4" style="width: 100px; height: auto;">
