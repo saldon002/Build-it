@@ -21,67 +21,53 @@
       <img src="../static/images/favicon.png" alt="Logo" class="logo_img me-2" style="width: 35px; height: auto;">
       <span style="font-size: 1.8rem; font-weight: bold; color: var(--text-color);">Build-it</span>
     </a>
-    <button class="navbar-toggler" type="button" onclick="openFullscreenMenu()">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
-        <!-- Dropdown eliminato per favorire lo stile full-screen -->
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link 2</a>
+
+        <!-- Drop down fullscreen -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="fullscreenMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            MENU
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-0 fullscreen-menu">
+            <!-- Icona "X" per chiudere -->
+            <span class="close-menu-icon" onclick="closeMenu()">&times;</span>
+            <div class="d-flex flex-column align-items-center justify-content-center vh-100">
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Home</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">About</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Services</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Contact</a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Fullscreen Menu -->
-<div id="fullscreenMenu" class="fullscreen-menu">
-  <!-- Icona "X" per chiudere -->
-  <span class="close-menu-icon" onclick="closeFullscreenMenu()">&times;</span>
-  <div class="d-flex flex-column align-items-center justify-content-center vh-100">
-    <a class="nav-link fs-4 mb-3 text-white" href="#">Home</a>
-    <a class="nav-link fs-4 mb-3 text-white" href="#">About</a>
-    <a class="nav-link fs-4 mb-3 text-white" href="#">Services</a>
-    <a class="nav-link fs-4 mb-3 text-white" href="#">Contact</a>
-  </div>
-</div>
-
-<!-- Stili Navbar e Fullscreen Menu -->
+<!-- Stili Navbar (Drop down Menu) -->
 <style>
-  /* Navbar */
-  .navbar {
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Fullscreen menu */
   .fullscreen-menu {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(26, 26, 46, 0.95); /* Sfondo traslucido */
+    background-color: #1a1a2e; /* Blu scuro */
     display: none;
     z-index: 1050;
   }
-  .fullscreen-menu.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .dropdown.show .fullscreen-menu {
+    display: block;
   }
-
-  /* Stile dei link nel menu */
   .fullscreen-menu a {
     color: #eaeaea; /* Grigio chiaro */
     text-decoration: none;
-    font-size: 1.8rem;
-    margin: 15px 0;
+    font-size: 1.5rem;
+    margin: 10px 0;
   }
   .fullscreen-menu a:hover {
     color: #ff4c29; /* Accento arancione */
@@ -103,18 +89,14 @@
   }
 </style>
 
-<!-- Script per gestire l'apertura e la chiusura del menu -->
+<!-- Script aggiuntivo per chiudere il menu -->
 <script>
-  function openFullscreenMenu() {
-    const fullscreenMenu = document.getElementById('fullscreenMenu');
-    fullscreenMenu.classList.add('active');
-  }
-
-  function closeFullscreenMenu() {
-    const fullscreenMenu = document.getElementById('fullscreenMenu');
-    fullscreenMenu.classList.remove('active');
+  function closeMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.remove('show');
   }
 </script>
+
 
 <!-- Main Section and texts -->
 
