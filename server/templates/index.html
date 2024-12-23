@@ -15,13 +15,14 @@
 <body>
 
 <!-- Navbar (Drop down menu)-->
+<!-- Navbar (Drop down menu) -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--background-color);">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
       <img src="../static/images/favicon.png" alt="Logo" class="logo_img me-2" style="width: 35px; height: auto;">
       <span style="font-size: 1.8rem; font-weight: bold; color: var(--text-color);">Build-it</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -59,16 +60,20 @@
     background-color: #1a1a2e; /* Blu scuro */
     display: none;
     z-index: 1050;
+    overflow-y: auto; /* Permette lo scorrimento su schermi piccoli */
   }
+
   .dropdown.show .fullscreen-menu {
     display: block;
   }
+
   .fullscreen-menu a {
     color: #eaeaea; /* Grigio chiaro */
     text-decoration: none;
     font-size: 1.5rem;
     margin: 10px 0;
   }
+
   .fullscreen-menu a:hover {
     color: #ff4c29; /* Accento arancione */
     text-decoration: underline;
@@ -84,8 +89,40 @@
     cursor: pointer;
     z-index: 1051;
   }
+
   .close-menu-icon:hover {
     color: #ff4c29; /* Accento arancione */
+  }
+
+  /* Modifica al comportamento della navbar per schermi più piccoli */
+  @media (max-width: 768px) {
+    .navbar-toggler {
+      z-index: 1060; /* Garantisce che il toggle sia sopra il menu */
+    }
+
+    .fullscreen-menu a {
+      font-size: 1.25rem; /* Riduci la dimensione del font su smartphone */
+    }
+
+    .fullscreen-menu {
+      height: 100vh; /* Garantisce che copra l'intero schermo */
+      top: 0;
+    }
+
+    .navbar {
+      z-index: 999; /* Posiziona la navbar dietro al menu */
+    }
+  }
+
+  /* Impostazioni per schermi piccoli */
+  @media (max-width: 576px) {
+    .fullscreen-menu a {
+      font-size: 1.1rem; /* Ancora più piccolo su schermi molto piccoli */
+    }
+
+    .close-menu-icon {
+      font-size: 1.5rem; /* Ridurre la dimensione dell'icona di chiusura */
+    }
   }
 </style>
 
@@ -95,7 +132,14 @@
     const dropdown = document.querySelector('.dropdown');
     dropdown.classList.remove('show');
   }
+
+  // Aggiunta per aprire il menu a schermo intero
+  document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.toggle('show');
+  });
 </script>
+
 
 
 <!-- Main Section and texts -->
