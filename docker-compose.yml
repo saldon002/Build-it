@@ -5,12 +5,14 @@ services:
     container_name: flask-app
     working_dir: /app
     volumes:
-      - .:/app
+      - ./data/components.json:/app/data/components.json
     ports:
       - "5000:5000"
     environment:
       - FLASK_APP=server/app.py
       - FLASK_ENV=development
+      - MONGO_URI=mongodb://mongodb:27017/mydatabase
+      - SECRET_KEY=mysecretkey
     depends_on:
       - mongodb  # MongoDB starts before the flask app
 
