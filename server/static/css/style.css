@@ -37,7 +37,7 @@ header h1:hover {
     color: var(--text-color);
 }
 
-/* Footer */
+/* Stop Footer  */
 footer {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -49,10 +49,15 @@ footer {
     bottom: 0;
     width: 100%;
     letter-spacing: 0.5px;
+    padding-bottom: ;
 }
 
 footer p {
     margin: 0;
+}
+
+body {
+    padding-bottom: 50px; /* Altezza del footer */
 }
 
 /* Contenuto principale */
