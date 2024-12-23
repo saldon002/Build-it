@@ -14,8 +14,8 @@
 </head>
 <body>
 
+<!-- Navbar (Drop down menu)-->
 
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--background-color);">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
@@ -39,10 +39,62 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
+        <!-- Dropdown fullscreen -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="fullscreenMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu dropdown-menu-end p-0 fullscreen-menu">
+            <div class="d-flex flex-column align-items-center justify-content-center vh-100">
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Home</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">About</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Services</a>
+              <a class="nav-link fs-4 mb-3 text-white" href="#">Contact</a>
+              <button class="btn btn-danger mt-4" onclick="closeMenu()">Close</button>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!--Style Navbar-->
+<style>
+  .fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a2e; /* Blu scuro */
+    display: none;
+    z-index: 1050;
+  }
+  .dropdown.show .fullscreen-menu {
+    display: block;
+  }
+  .fullscreen-menu a {
+    color: #eaeaea; /* Grigio chiaro */
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .fullscreen-menu a:hover {
+    color: #ff4c29; /* Accento arancione */
+    text-decoration: underline;
+  }
+</style>
+
+<!-- Script additional Navbar -->
+<script>
+  function closeMenu() {
+    const dropdown = document.querySelector('.dropdown');
+    dropdown.classList.remove('show');
+  }
+</script>
+
+
 
 <!-- Main Section and texts -->
 <main class="text-center mt-5">
