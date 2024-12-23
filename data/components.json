@@ -1,0 +1,3124 @@
+{
+  "components":
+  [
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 7 2700X",
+      "brand": "AMD",
+      "cores": 8,
+      "threads": 16,
+      "max_clock": 4.3,
+      "base_clock": 3.7,
+      "socket": "AM4",
+      "chipset_compatibility": ["B350", "X370", "A320", "B450", "X470", "A420", "B550", "X570"],
+      "tdp": 105,
+      "thermal_solution": true,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen+",
+      "l3_cache": 16,
+      "l2_cache": 4
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 9 7950X",
+      "brand": "AMD",
+      "cores": 16,
+      "threads": 32,
+      "max_clock": 5.7,
+      "base_clock": 4.5,
+      "socket": "AM5",
+      "chipset_compatibility": ["B650", "X670", "B550", "X570"],
+      "tdp": 170,
+      "thermal_solution": false,
+      "pcie": "5.0 x16",
+      "memory4_speed": 4800,
+      "memory5_speed": 6000,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 4",
+      "l3_cache": 64,
+      "l2_cache": 16
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i9-13900K",
+      "brand": "Intel",
+      "cores": 24,
+      "threads": 32,
+      "max_clock": 5.8,
+      "base_clock": 3.0,
+      "socket": "LGA1700",
+      "chipset_compatibility": ["Z690", "B660", "H670", "Z790"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "5.0 x16",
+      "memory4_speed": 3200,
+      "memory5_speed": 5600,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Raptor Lake",
+      "l3_cache": 36,
+      "l2_cache": 32
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 5 5600X",
+      "brand": "AMD",
+      "cores": 6,
+      "threads": 12,
+      "max_clock": 4.6,
+      "base_clock": 3.7,
+      "socket": "AM4",
+      "chipset_compatibility": ["B450", "X570", "B550"],
+      "tdp": 65,
+      "thermal_solution": true,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 3",
+      "l3_cache": 32,
+      "l2_cache": 3
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i5-12600K",
+      "brand": "Intel",
+      "cores": 10,
+      "threads": 16,
+      "max_clock": 4.9,
+      "base_clock": 3.7,
+      "socket": "LGA1700",
+      "chipset_compatibility": ["Z690", "B660", "H670"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "5.0 x16",
+      "memory4_speed": 3200,
+      "memory5_speed": 4800,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Alder Lake",
+      "l3_cache": 20,
+      "l2_cache": 7
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 7 5800X",
+      "brand": "AMD",
+      "cores": 8,
+      "threads": 16,
+      "max_clock": 4.7,
+      "base_clock": 3.8,
+      "socket": "AM4",
+      "chipset_compatibility": ["B550", "X570"],
+      "tdp": 105,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 3",
+      "l3_cache": 32,
+      "l2_cache": 4
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i7-12700K",
+      "brand": "Intel",
+      "cores": 12,
+      "threads": 20,
+      "max_clock": 5.0,
+      "base_clock": 3.6,
+      "socket": "LGA1700",
+      "chipset_compatibility": ["Z690", "B660", "H670"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "5.0 x16",
+      "memory4_speed": 3200,
+      "memory5_speed": 4800,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Alder Lake",
+      "l3_cache": 25,
+      "l2_cache": 12
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 3 3300X",
+      "brand": "AMD",
+      "cores": 4,
+      "threads": 4,
+      "max_clock": 4.3,
+      "base_clock": 3.8,
+      "socket": "AM4",
+      "chipset_compatibility": ["B350", "X370", "A320"],
+      "tdp": 95,
+      "thermal_solution": true,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2666,
+      "memory5_speed": null,
+      "support_for_virtualization": false,
+      "integrated_gpu": false,
+      "architecture": "Zen",
+      "l3_cache": 4,
+      "l2_cache": 2
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i3-12100F",
+      "brand": "Intel",
+      "cores": 4,
+      "threads": 4,
+      "max_clock": 4.3,
+      "base_clock": 3.3,
+      "socket": "LGA1700",
+      "chipset_compatibility": ["B660", "H670", "Z690"],
+      "tdp": 60,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 3200,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Alder Lake",
+      "l3_cache": 12,
+      "l2_cache": 4
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 5 3600X",
+      "brand": "AMD",
+      "cores": 6,
+      "threads": 12,
+      "max_clock": 4.4,
+      "base_clock": 3.8,
+      "socket": "AM4",
+      "chipset_compatibility": ["B450", "X470", "B550", "X570"],
+      "tdp": 95,
+      "thermal_solution": true,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 2",
+      "l3_cache": 32,
+      "l2_cache": 3
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i7-11700K",
+      "brand": "Intel",
+      "cores": 8,
+      "threads": 16,
+      "max_clock": 5.0,
+      "base_clock": 3.6,
+      "socket": "LGA1200",
+      "chipset_compatibility": ["Z590", "B560"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Rocket Lake",
+      "l3_cache": 16,
+      "l2_cache": 12
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 9 5900X",
+      "brand": "AMD",
+      "cores": 12,
+      "threads": 24,
+      "max_clock": 4.8,
+      "base_clock": 3.7,
+      "socket": "AM4",
+      "chipset_compatibility": ["B550", "X570"],
+      "tdp": 105,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 3",
+      "l3_cache": 64,
+      "l2_cache": 6
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i5-11600K",
+      "brand": "Intel",
+      "cores": 6,
+      "threads": 12,
+      "max_clock": 4.9,
+      "base_clock": 3.9,
+      "socket": "LGA1200",
+      "chipset_compatibility": ["Z590", "B560"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Rocket Lake",
+      "l3_cache": 12,
+      "l2_cache": 6
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 3 2200G",
+      "brand": "AMD",
+      "cores": 4,
+      "threads": 4,
+      "max_clock": 3.7,
+      "base_clock": 3.5,
+      "socket": "AM4",
+      "chipset_compatibility": ["A320", "B350", "B450", "X370"],
+      "tdp": 65,
+      "thermal_solution": true,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2666,
+      "memory5_speed": null,
+      "support_for_virtualization": false,
+      "integrated_gpu": true,
+      "architecture": "Zen",
+      "l3_cache": 192,
+      "l2_cache": 2
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i9-11900K",
+      "brand": "Intel",
+      "cores": 8,
+      "threads": 16,
+      "max_clock": 5.3,
+      "base_clock": 3.5,
+      "socket": "LGA1200",
+      "chipset_compatibility": ["Z590", "B560"],
+      "tdp": 125,
+      "thermal_solution": false,
+      "pcie": "4.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": true,
+      "architecture": "Rocket Lake",
+      "l3_cache": 16,
+      "l2_cache": 12
+    },
+    {
+      "type": "CPU",
+      "name": "AMD Ryzen 5 3600",
+      "brand": "AMD",
+      "cores": 6,
+      "threads": 12,
+      "max_clock": 4.2,
+      "base_clock": 3.6,
+      "socket": "AM4",
+      "chipset_compatibility": ["B450", "B550", "X570"],
+      "tdp": 65,
+      "thermal_solution": true,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2933,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Zen 2",
+      "l3_cache": 32,
+      "l2_cache": 3
+    },
+    {
+      "type": "CPU",
+      "name": "Intel Core i5-10400F",
+      "brand": "Intel",
+      "cores": 6,
+      "threads": 12,
+      "max_clock": 4.3,
+      "base_clock": 2.9,
+      "socket": "LGA1200",
+      "chipset_compatibility": ["B460", "H470", "Z490"],
+      "tdp": 65,
+      "thermal_solution": false,
+      "pcie": "3.0 x16",
+      "memory4_speed": 2666,
+      "memory5_speed": null,
+      "support_for_virtualization": true,
+      "integrated_gpu": false,
+      "architecture": "Comet Lake",
+      "l3_cache": 12,
+      "l2_cache": 6
+    },
+
+
+
+
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1080",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 8,
+      "memory_type": "GDDR5X",
+      "memory_speed": 10,
+      "base_clock": 1607,
+      "boost_clock": 1733,
+      "tdp": 180,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 2560,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 111,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4", "DVI-D"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 4090",
+      "brand": "NVIDIA",
+      "architecture": "Ada Lovelace",
+      "gpu_memory": 24,
+      "memory_type": "GDDR6X",
+      "memory_speed": 21,
+      "base_clock": 2235,
+      "boost_clock": 2520,
+      "tdp": 450,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 3,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 16384,
+      "integrated_gpu": false,
+      "required_power_connector": ["12-pin"],
+      "dimensions": {
+        "length": 336,
+        "height": 140,
+        "width": 58
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 3080",
+      "brand": "NVIDIA",
+      "architecture": "Ampere",
+      "gpu_memory": 10,
+      "memory_type": "GDDR6X",
+      "memory_speed": 19,
+      "base_clock": 1440,
+      "boost_clock": 1710,
+      "tdp": 320,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 8704,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 285,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 3070",
+      "brand": "NVIDIA",
+      "architecture": "Ampere",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1500,
+      "boost_clock": 1725,
+      "tdp": 220,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 5888,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 242,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1660 Ti",
+      "brand": "NVIDIA",
+      "architecture": "Turing",
+      "gpu_memory": 6,
+      "memory_type": "GDDR5",
+      "memory_speed": 12,
+      "base_clock": 1500,
+      "boost_clock": 1770,
+      "tdp": 120,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1536,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 247,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 6900 XT",
+      "brand": "AMD",
+      "architecture": "RDNA 2",
+      "gpu_memory": 16,
+      "memory_type": "GDDR6",
+      "memory_speed": 16,
+      "base_clock": 1825,
+      "boost_clock": 2250,
+      "tdp": 300,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 5120,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 6800 XT",
+      "brand": "AMD",
+      "architecture": "RDNA 2",
+      "gpu_memory": 16,
+      "memory_type": "GDDR6",
+      "memory_speed": 16,
+      "base_clock": 1825,
+      "boost_clock": 2250,
+      "tdp": 300,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 4608,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 6700 XT",
+      "brand": "AMD",
+      "architecture": "RDNA 2",
+      "gpu_memory": 12,
+      "memory_type": "GDDR6",
+      "memory_speed": 16,
+      "base_clock": 2321,
+      "boost_clock": 2581,
+      "tdp": 230,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 2560,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "brand": "NVIDIA",
+      "architecture": "Ampere",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1410,
+      "boost_clock": 1770,
+      "tdp": 200,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 4864,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 242,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1650 Super",
+      "brand": "NVIDIA",
+      "architecture": "Turing",
+      "gpu_memory": 4,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1530,
+      "boost_clock": 1725,
+      "tdp": 100,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1280,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 229,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1650",
+      "brand": "NVIDIA",
+      "architecture": "Turing",
+      "gpu_memory": 4,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1485,
+      "boost_clock": 1665,
+      "tdp": 75,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 896,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 169,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 580",
+      "brand": "AMD",
+      "architecture": "Polaris",
+      "gpu_memory": 8,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1257,
+      "boost_clock": 1340,
+      "tdp": 185,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 2304,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin", "8-pin"],
+      "dimensions": {
+        "length": 270,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4", "DVI-D"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 5700 XT",
+      "brand": "AMD",
+      "architecture": "RDNA",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1605,
+      "boost_clock": 1905,
+      "tdp": 225,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 2560,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 270,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 3060",
+      "brand": "NVIDIA",
+      "architecture": "Ampere",
+      "gpu_memory": 12,
+      "memory_type": "GDDR6",
+      "memory_speed": 15,
+      "base_clock": 1320,
+      "boost_clock": 1777,
+      "tdp": 170,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 3584,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin"],
+      "dimensions": {
+        "length": 242,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce RTX 3050",
+      "brand": "NVIDIA",
+      "architecture": "Ampere",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1552,
+      "boost_clock": 1777,
+      "tdp": 130,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 2048,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 242,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4a"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 6600 XT",
+      "brand": "AMD",
+      "architecture": "RDNA 2",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 16,
+      "base_clock": 1968,
+      "boost_clock": 2589,
+      "tdp": 160,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": true,
+      "directx_version": "12",
+      "cuda_cores": 2048,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.1", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 5700",
+      "brand": "AMD",
+      "architecture": "RDNA",
+      "gpu_memory": 8,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1465,
+      "boost_clock": 1725,
+      "tdp": 180,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 2304,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1060",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 6,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1506,
+      "boost_clock": 1708,
+      "tdp": 120,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1280,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 242,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1050 Ti",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 4,
+      "memory_type": "GDDR5",
+      "memory_speed": 7,
+      "base_clock": 1290,
+      "boost_clock": 1392,
+      "tdp": 75,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 768,
+      "integrated_gpu": false,
+      "required_power_connector": [],
+      "dimensions": {
+        "length": 145,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 580X",
+      "brand": "AMD",
+      "architecture": "Polaris",
+      "gpu_memory": 8,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1340,
+      "boost_clock": 1380,
+      "tdp": 185,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 2304,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin", "8-pin"],
+      "dimensions": {
+        "length": 270,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4", "DVI-D"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 5500 XT",
+      "brand": "AMD",
+      "architecture": "RDNA",
+      "gpu_memory": 4,
+      "memory_type": "GDDR6",
+      "memory_speed": 14,
+      "base_clock": 1607,
+      "boost_clock": 1845,
+      "tdp": 130,
+      "pci_compatibility": "4.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1408,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 222,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 750 Ti",
+      "brand": "NVIDIA",
+      "architecture": "Maxwell",
+      "gpu_memory": 2,
+      "memory_type": "GDDR5",
+      "memory_speed": 5,
+      "base_clock": 1020,
+      "boost_clock": 1085,
+      "tdp": 60,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 640,
+      "integrated_gpu": false,
+      "required_power_connector": [],
+      "dimensions": {
+        "length": 145,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1650 OC",
+      "brand": "NVIDIA",
+      "architecture": "Turing",
+      "gpu_memory": 4,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1485,
+      "boost_clock": 1665,
+      "tdp": 75,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 896,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 179,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "AMD Radeon RX 5500",
+      "brand": "AMD",
+      "architecture": "RDNA",
+      "gpu_memory": 4,
+      "memory_type": "GDDR5",
+      "memory_speed": 7,
+      "base_clock": 1100,
+      "boost_clock": 1180,
+      "tdp": 80,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1280,
+      "integrated_gpu": false,
+      "required_power_connector": [],
+      "dimensions": {
+        "length": 160,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA Quadro P4000",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 8,
+      "memory_type": "GDDR5",
+      "memory_speed": 8,
+      "base_clock": 1328,
+      "boost_clock": 1480,
+      "tdp": 105,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1792,
+      "integrated_gpu": false,
+      "required_power_connector": ["6-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["DisplayPort 1.4"],
+      "virtualization_support": true
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA Quadro P2000",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 5,
+      "memory_type": "GDDR5",
+      "memory_speed": 7,
+      "base_clock": 1265,
+      "boost_clock": 1400,
+      "tdp": 75,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 1024,
+      "integrated_gpu": false,
+      "required_power_connector": [],
+      "dimensions": {
+        "length": 170,
+        "height": 112,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["DisplayPort 1.4"],
+      "virtualization_support": true
+    },
+    {
+      "type": "GPU",
+      "name": "NVIDIA GeForce GTX 1080 Ti",
+      "brand": "NVIDIA",
+      "architecture": "Pascal",
+      "gpu_memory": 11,
+      "memory_type": "GDDR5X",
+      "memory_speed": 11,
+      "base_clock": 1480,
+      "boost_clock": 1582,
+      "tdp": 250,
+      "pci_compatibility": "3.0 x16",
+      "slots_required": 2,
+      "supports_ray_tracing": false,
+      "directx_version": "12",
+      "cuda_cores": 3584,
+      "integrated_gpu": false,
+      "required_power_connector": ["8-pin", "8-pin"],
+      "dimensions": {
+        "length": 267,
+        "height": 113,
+        "width": 40
+      },
+      "cooling_solution": "Air",
+      "output_ports": ["HDMI 2.0", "DisplayPort 1.4"],
+      "virtualization_support": false
+    },
+
+
+
+
+
+    {
+      "type": "RAM",
+      "name": "Corsair Vengeance LPX DDR4",
+      "brand": "Corsair",
+      "size": 8,
+      "memory_type": "DDR4",
+      "memory_speed": 3000,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200", "LGA 1700", "TR4"],
+      "chipset_compatibility": ["B350", "B450", "X370", "X470", "Z370", "Z490", "X299"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 1,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Corsair Vengeance LPX DDR4",
+      "brand": "Corsair",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3200,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "Z370", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "G.SKILL Ripjaws V DDR4",
+      "brand": "G.SKILL",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3600,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B450", "X570", "Z390", "Z490"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Red",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Kingston HyperX Fury DDR4",
+      "brand": "Kingston",
+      "size": 8,
+      "memory_type": "DDR4",
+      "memory_speed": 2666,
+      "cas_latency": 16,
+      "voltage": 1.2,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 1,
+      "heat_spreader": false,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Crucial Ballistix DDR4",
+      "brand": "Crucial",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3200,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B450", "X570", "Z390", "Z490"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Gray",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Corsair Vengeance LPX DDR4",
+      "brand": "Corsair",
+      "size": 32,
+      "memory_type": "DDR4",
+      "memory_speed": 3600,
+      "cas_latency": 18,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B450", "X570", "Z390", "Z490"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "G.SKILL Trident Z RGB DDR4",
+      "brand": "G.SKILL",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3600,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B450", "X570", "Z390", "Z490"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "RGB",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "TeamGroup T-Force Delta RGB DDR4",
+      "brand": "TeamGroup",
+      "size": 8,
+      "memory_type": "DDR4",
+      "memory_speed": 3000,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 1,
+      "heat_spreader": true,
+      "color": "RGB",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "HyperX Predator DDR4",
+      "brand": "HyperX",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3733,
+      "cas_latency": 17,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["X570", "Z490", "Z390"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Corsair Vengeance LPX DDR4",
+      "brand": "Corsair",
+      "size": 32,
+      "memory_type": "DDR4",
+      "memory_speed": 2666,
+      "cas_latency": 16,
+      "voltage": 1.2,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": false,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Patriot Viper Steel DDR4",
+      "brand": "Patriot",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3200,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Ballistix Tactical DDR4",
+      "brand": "Ballistix",
+      "size": 8,
+      "memory_type": "DDR4",
+      "memory_speed": 2400,
+      "cas_latency": 16,
+      "voltage": 1.2,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 1,
+      "heat_spreader": false,
+      "color": "Gray",
+      "ECC": false,
+      "overclocking_supported": false,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "G.SKILL Ripjaws V DDR4",
+      "brand": "G.SKILL",
+      "size": 32,
+      "memory_type": "DDR4",
+      "memory_speed": 3600,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B450", "X570", "Z390", "Z490"],
+      "pcie_compatibility": "4.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Red",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+    {
+      "type": "RAM",
+      "name": "Corsair Vengeance LPX DDR4",
+      "brand": "Corsair",
+      "size": 16,
+      "memory_type": "DDR4",
+      "memory_speed": 3000,
+      "cas_latency": 16,
+      "voltage": 1.35,
+      "form_factor": "DIMM",
+      "supported_by": ["AM4", "LGA 1151", "LGA 1200"],
+      "chipset_compatibility": ["B350", "X370", "B460", "Z490"],
+      "pcie_compatibility": "3.0 x16",
+      "number_of_modules": 2,
+      "heat_spreader": true,
+      "color": "Black",
+      "ECC": false,
+      "overclocking_supported": true,
+      "supported_virtualization": true
+    },
+
+
+
+
+
+    {
+      "type": "MOBO",
+      "name": "Asus Prime X470 Pro",
+      "brand": "Asus",
+      "socket": "AM4",
+      "chipset": "X470",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2933,
+        "overclocked_ddr4_speed": 3466
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 4,
+        "usb_3_0": 2,
+        "usb_3_1": 1
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": false
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1220",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "1801",
+      "external_ports": {
+        "display_ports": ["HDMI", "DisplayPort"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "MSI MPG B550 GAMING EDGE WIFI",
+      "brand": "MSI",
+      "socket": "AM4",
+      "chipset": "B550",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2666,
+        "overclocked_ddr4_speed": 4400
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 4,
+        "usb_3_0": 2,
+        "usb_3_1": 2
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": true
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1200",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "1.10",
+      "external_ports": {
+        "display_ports": ["HDMI", "DisplayPort"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "Gigabyte AORUS X570 ELITE",
+      "brand": "Gigabyte",
+      "socket": "AM4",
+      "chipset": "X570",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2933,
+        "overclocked_ddr4_speed": 4400
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["4.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 4,
+        "usb_3_0": 2,
+        "usb_3_1": 2
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": false
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1220",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "F12",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "ASRock B450M PRO4",
+      "brand": "ASRock",
+      "socket": "AM4",
+      "chipset": "B450",
+      "form_factor": "Micro ATX",
+      "pci_slots": {
+        "pcie_16x": 1,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2666,
+        "overclocked_ddr4_speed": 2933
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 4,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 2,
+        "usb_3_0": 4,
+        "usb_3_1": 0
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": false
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC892",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": false
+      },
+      "overclocking_support": false,
+      "bios_version": "3.20",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "MSI MAG Z490 TOMAHAWK WIFI",
+      "brand": "MSI",
+      "socket": "LGA 1200",
+      "chipset": "Z490",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 3
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2933,
+        "overclocked_ddr4_speed": 4600
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 2,
+        "usb_3_0": 2,
+        "usb_3_1": 2
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": true
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1200",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "1.11",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "ASUS ROG STRIX B550-F GAMING (Wi-Fi)",
+      "brand": "Asus",
+      "socket": "AM4",
+      "chipset": "B550",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2666,
+        "overclocked_ddr4_speed": 4400
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["4.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 4,
+        "usb_3_0": 2,
+        "usb_3_1": 1
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": true
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1220",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "2603",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "Gigabyte Z390 AORUS MASTER",
+      "brand": "Gigabyte",
+      "socket": "LGA 1151",
+      "chipset": "Z390",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 3,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2933,
+        "overclocked_ddr4_speed": 4600
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 2,
+        "usb_3_0": 2,
+        "usb_3_1": 2
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": false
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC1220",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "F10",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+    {
+      "type": "MOBO",
+      "name": "MSI Z590 PRO WIFI",
+      "brand": "MSI",
+      "socket": "LGA 1200",
+      "chipset": "Z590",
+      "form_factor": "ATX",
+      "pci_slots": {
+        "pcie_16x": 2,
+        "pcie_1x": 2
+      },
+      "memory_slots": {
+        "total_slots": 4,
+        "supported_memory_type": "DDR4",
+        "max_memory_capacity": 64,
+        "max_memory_per_slot": 16
+      },
+      "memory_speed": {
+        "max_ddr4_speed": 2933,
+        "overclocked_ddr4_speed": 4600
+      },
+      "supported_storage": {
+        "m_2_slots": 2,
+        "sata_ports": 6,
+        "sata_speed": "6Gb/s",
+        "m2_speed": "NVMe"
+      },
+      "graphics": {
+        "integrated_gpu": false,
+        "pcie_slots": ["3.0 x16"]
+      },
+      "usb_ports": {
+        "usb_2_0": 4,
+        "usb_3_0": 3,
+        "usb_3_1": 1
+      },
+      "network": {
+        "ethernet": "1 x 10/100/1000",
+        "wifi": true
+      },
+      "audio": {
+        "audio_chip": "Realtek ALC892",
+        "audio_ports": 6
+      },
+      "power_connector": {
+        "24_pin": true,
+        "8_pin": true
+      },
+      "overclocking_support": true,
+      "bios_version": "1.0",
+      "external_ports": {
+        "display_ports": ["HDMI"]
+      }
+    },
+
+
+
+
+
+    {
+      "type": "Storage",
+      "name": "Samsung 970 EVO Plus",
+      "brand": "Samsung",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3500,
+      "write_speed": 3300,
+      "endurance": "600 TBW",
+      "nand_type": "V-NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B350", "X370", "B450", "Z390", "X570", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Crucial P3",
+      "brand": "Crucial",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3500,
+      "write_speed": 3000,
+      "endurance": "150 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 3.0", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B450", "X570", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Western Digital Black SN850",
+      "brand": "Western Digital",
+      "capacity": 1,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 7000,
+      "write_speed": 5300,
+      "endurance": "600 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.4", "PCIe 4.0 x4"],
+      "compatible_chipsets": ["B550", "X570", "Z590"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Kingston A2000",
+      "brand": "Kingston",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 2200,
+      "write_speed": 2000,
+      "endurance": "200 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B350", "X370", "B450", "Z390", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Samsung 980 PRO",
+      "brand": "Samsung",
+      "capacity": 1,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 7000,
+      "write_speed": 5000,
+      "endurance": "600 TBW",
+      "nand_type": "V-NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 4.0 x4"],
+      "compatible_chipsets": ["B550", "X570", "Z590"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Seagate FireCuda 520",
+      "brand": "Seagate",
+      "capacity": 1,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 5000,
+      "write_speed": 4400,
+      "endurance": "600 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 4.0 x4"],
+      "compatible_chipsets": ["B550", "X570", "Z590"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Samsung 970 EVO",
+      "brand": "Samsung",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3500,
+      "write_speed": 2500,
+      "endurance": "300 TBW",
+      "nand_type": "V-NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B450", "X570", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Corsair MP600",
+      "brand": "Corsair",
+      "capacity": 1,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 4950,
+      "write_speed": 4250,
+      "endurance": "1200 TBW",
+      "nand_type": "3D TLC NAND",
+      "supported_protocols": ["NVMe 1.4", "PCIe 4.0 x4"],
+      "compatible_chipsets": ["X570", "Z590"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "ADATA XPG SX8200 Pro",
+      "brand": "ADATA",
+      "capacity": 512,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3500,
+      "write_speed": 3000,
+      "endurance": "320 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B450", "X570", "Z390"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Intel 660p",
+      "brand": "Intel",
+      "capacity": 512,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 1800,
+      "write_speed": 1800,
+      "endurance": "200 TBW",
+      "nand_type": "QLC NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B360", "Z390", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Western Digital Blue SN550",
+      "brand": "Western Digital",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 2400,
+      "write_speed": 1750,
+      "endurance": "150 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B350", "X470", "Z390"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Kingston NV2",
+      "brand": "Kingston",
+      "capacity": 500,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3500,
+      "write_speed": 2100,
+      "endurance": "150 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["NVMe 1.4", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B450", "X570", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "Crucial MX500",
+      "brand": "Crucial",
+      "capacity": 1,
+      "interface": "SATA",
+      "form_factor": "2.5\"",
+      "read_speed": 560,
+      "write_speed": 510,
+      "endurance": "180 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["SATA III"],
+      "compatible_chipsets": ["B350", "X370", "B450", "Z390"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": false
+    },
+    {
+      "type": "Storage",
+      "name": "Seagate BarraCuda",
+      "brand": "Seagate",
+      "capacity": 2,
+      "interface": "SATA",
+      "form_factor": "3.5\"",
+      "read_speed": 160,
+      "write_speed": 150,
+      "endurance": "500 TBW",
+      "nand_type": "N/A",
+      "supported_protocols": ["SATA III"],
+      "compatible_chipsets": ["B350", "X370", "B450"],
+      "max_capacity": 5000,
+      "power_loss_protection": false,
+      "thermal_throttling": false
+    },
+    {
+      "type": "Storage",
+      "name": "Toshiba XG6",
+      "brand": "Toshiba",
+      "capacity": 1,
+      "interface": "M.2 NVMe",
+      "form_factor": "M.2 2280",
+      "read_speed": 3100,
+      "write_speed": 2600,
+      "endurance": "320 TBW",
+      "nand_type": "BiCS FLASH",
+      "supported_protocols": ["NVMe 1.3", "PCIe 3.0 x4"],
+      "compatible_chipsets": ["B450", "X570", "Z490"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": true
+    },
+    {
+      "type": "Storage",
+      "name": "ADATA SU800",
+      "brand": "ADATA",
+      "capacity": 1,
+      "interface": "SATA",
+      "form_factor": "2.5\"",
+      "read_speed": 550,
+      "write_speed": 500,
+      "endurance": "180 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["SATA III"],
+      "compatible_chipsets": ["B350", "X370", "B450"],
+      "max_capacity": 2000,
+      "power_loss_protection": true,
+      "thermal_throttling": false
+    },
+    {
+      "type": "Storage",
+      "name": "Samsung 860 EVO",
+      "brand": "Samsung",
+      "capacity": 1,
+      "interface": "SATA",
+      "form_factor": "2.5\"",
+      "read_speed": 550,
+      "write_speed": 520,
+      "endurance": "600 TBW",
+      "nand_type": "3D V-NAND",
+      "supported_protocols": ["SATA III"],
+      "compatible_chipsets": ["B450", "X570", "Z490"],
+      "max_capacity": 4000,
+      "power_loss_protection": true,
+      "thermal_throttling": false
+    },
+    {
+      "type": "Storage",
+      "name": "Western Digital Green SSD",
+      "brand": "Western Digital",
+      "capacity": 500,
+      "interface": "SATA",
+      "form_factor": "2.5\"",
+      "read_speed": 545,
+      "write_speed": 430,
+      "endurance": "80 TBW",
+      "nand_type": "3D NAND",
+      "supported_protocols": ["SATA III"],
+      "compatible_chipsets": ["B350", "B450", "Z390"],
+      "max_capacity": 2000,
+      "power_loss_protection": false,
+      "thermal_throttling": false
+    },
+
+
+
+
+
+    {
+      "type": "PSU",
+      "name": "Corsair RM650x",
+      "brand": "Corsair",
+      "wattage": 650,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 4,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "135mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "EVGA SuperNOVA 750 G5",
+      "brand": "EVGA",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 3
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "135mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Seasonic Focus GX-850",
+      "brand": "Seasonic",
+      "wattage": 850,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Cooler Master MWE Gold 750W",
+      "brand": "Cooler Master",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Corsair HX850i",
+      "brand": "Corsair",
+      "wattage": 850,
+      "efficiency_rating": "80+ Platinum",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Platinum",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 8,
+        "Molex": 4
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Thermaltake Toughpower GF1 750W",
+      "brand": "Thermaltake",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 3
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "BitFenix Whisper M 750W",
+      "brand": "BitFenix",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 4,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "NZXT C750",
+      "brand": "NZXT",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Gigabyte P750GM",
+      "brand": "Gigabyte",
+      "wattage": 750,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 4,
+        "SATA": 6,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Corsair CV550",
+      "brand": "Corsair",
+      "wattage": 550,
+      "efficiency_rating": "80+ Bronze",
+      "modular": false,
+      "form_factor": "ATX",
+      "certification": "80+ Bronze",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 1,
+        "6+2-pin PCIe": 2,
+        "SATA": 3,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "EVGA 600 W1",
+      "brand": "EVGA",
+      "wattage": 600,
+      "efficiency_rating": "80+ White",
+      "modular": false,
+      "form_factor": "ATX",
+      "certification": "80+ White",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 1,
+        "6+2-pin PCIe": 2,
+        "SATA": 4,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Seasonic S12III 600W",
+      "brand": "Seasonic",
+      "wattage": 600,
+      "efficiency_rating": "80+ Bronze",
+      "modular": false,
+      "form_factor": "ATX",
+      "certification": "80+ Bronze",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 1,
+        "6+2-pin PCIe": 2,
+        "SATA": 4,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Cooler Master MWE Bronze 600W",
+      "brand": "Cooler Master",
+      "wattage": 600,
+      "efficiency_rating": "80+ Bronze",
+      "modular": false,
+      "form_factor": "ATX",
+      "certification": "80+ Bronze",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 1,
+        "6+2-pin PCIe": 2,
+        "SATA": 4,
+        "Molex": 2
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 140mm",
+      "fans": 1,
+      "fan_size": "120mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Corsair RM1000x",
+      "brand": "Corsair",
+      "wattage": 1000,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 6,
+        "SATA": 8,
+        "Molex": 4
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "EVGA SuperNOVA 1000 G5",
+      "brand": "EVGA",
+      "wattage": 1000,
+      "efficiency_rating": "80+ Gold",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Gold",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 6,
+        "SATA": 8,
+        "Molex": 4
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "135mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Seasonic Platinum 1000W",
+      "brand": "Seasonic",
+      "wattage": 1000,
+      "efficiency_rating": "80+ Platinum",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Platinum",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 6,
+        "SATA": 8,
+        "Molex": 4
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Corsair AX1200i",
+      "brand": "Corsair",
+      "wattage": 1200,
+      "efficiency_rating": "80+ Platinum",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Platinum",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 8,
+        "SATA": 10,
+        "Molex": 6
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+    {
+      "type": "PSU",
+      "name": "Thermaltake Toughpower iRGB Plus 1200W",
+      "brand": "Thermaltake",
+      "wattage": 1200,
+      "efficiency_rating": "80+ Platinum",
+      "modular": true,
+      "form_factor": "ATX",
+      "certification": "80+ Platinum",
+      "connectors": {
+        "24-pin": 1,
+        "8-pin": 2,
+        "6+2-pin PCIe": 8,
+        "SATA": 10,
+        "Molex": 4
+      },
+      "supported_voltage": "100-240V",
+      "dimensions": "150mm x 86mm x 160mm",
+      "fans": 1,
+      "fan_size": "140mm",
+      "power_loss_protection": true,
+      "short_circuit_protection": true,
+      "overload_protection": true
+    },
+
+
+
+
+
+    {
+      "type": "CASE",
+      "name": "NZXT S340 ELITE",
+      "brand": "NZXT",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 381,
+      "max_cpu_cooler_height": 161,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 3,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "microphone": 1,
+        "usb_2_0": 1
+      },
+      "fans": {
+        "pre_installed": 2,
+        "fan_mounts": {
+          "front": 3,
+          "top": 2,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 280mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "203mm x 432mm x 474mm",
+      "weight": "7.5kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "top", "bottom"],
+      "features": ["Tempered Glass Side Panel", "Cable Management System", "RGB Lighting Support"]
+    },
+    {
+      "type": "CASE",
+      "name": "Corsair Carbide Series 275R",
+      "brand": "Corsair",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 370,
+      "max_cpu_cooler_height": 170,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 3,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "usb_2_0": 2
+      },
+      "fans": {
+        "pre_installed": 2,
+        "fan_mounts": {
+          "front": 2,
+          "top": 1,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 360mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "211mm x 464mm x 450mm",
+      "weight": "6.6kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "bottom"],
+      "features": ["Tempered Glass Side Panel", "Cable Management System"]
+    },
+    {
+      "type": "CASE",
+      "name": "Phanteks Eclipse P400A",
+      "brand": "Phanteks",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 420,
+      "max_cpu_cooler_height": 160,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 3,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "usb_2_0": 2
+      },
+      "fans": {
+        "pre_installed": 2,
+        "fan_mounts": {
+          "front": 3,
+          "top": 2,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 360mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "210mm x 464mm x 470mm",
+      "weight": "6.8kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "bottom"],
+      "features": ["Tempered Glass Side Panel", "High Airflow Design", "Cable Management System"]
+    },
+    {
+      "type": "CASE",
+      "name": "Cooler Master MasterBox Q300L",
+      "brand": "Cooler Master",
+      "form_factor": "Micro ATX",
+      "motherboard_compatibility": ["Micro ATX", "Mini ITX"],
+      "max_gpu_length": 360,
+      "max_cpu_cooler_height": 157,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 3,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 1,
+        "audio": 1,
+        "usb_2_0": 2
+      },
+      "fans": {
+        "pre_installed": 1,
+        "fan_mounts": {
+          "front": 2,
+          "top": 1,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 240mm",
+        "top_radiator": "up to 120mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "230mm x 381mm x 375mm",
+      "weight": "4.3kg",
+      "material": "Steel, Plastic",
+      "color": "Black",
+      "dust_filters": ["front", "bottom"],
+      "features": ["Compact Design", "Easy-to-clean Dust Filters", "Portable"]
+    },
+    {
+      "type": "CASE",
+      "name": "Fractal Design Meshify C",
+      "brand": "Fractal Design",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 315,
+      "max_cpu_cooler_height": 170,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 2,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "usb_2_0": 1
+      },
+      "fans": {
+        "pre_installed": 2,
+        "fan_mounts": {
+          "front": 3,
+          "top": 2,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 360mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "211mm x 453mm x 395mm",
+      "weight": "7.2kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "top", "bottom"],
+      "features": ["Tempered Glass Side Panel", "High Airflow Design", "Cable Management System"]
+    },
+    {
+      "type": "CASE",
+      "name": "Lian Li PC-O11 Dynamic",
+      "brand": "Lian Li",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 420,
+      "max_cpu_cooler_height": 155,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 3,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "usb_2_0": 1
+      },
+      "fans": {
+        "pre_installed": 3,
+        "fan_mounts": {
+          "front": 3,
+          "top": 3,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 360mm",
+        "top_radiator": "up to 360mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "272mm x 446mm x 445mm",
+      "weight": "10.5kg",
+      "material": "Aluminum, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "bottom", "top"],
+      "features": ["Dual Chamber Design", "Tempered Glass Panels", "High Airflow"]
+    },
+    {
+      "type": "CASE",
+      "name": "NZXT H510 Elite",
+      "brand": "NZXT",
+      "form_factor": "Mid Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 381,
+      "max_cpu_cooler_height": 165,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 2,
+        "3_5inch": 2
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1,
+        "usb_2_0": 1
+      },
+      "fans": {
+        "pre_installed": 2,
+        "fan_mounts": {
+          "front": 2,
+          "top": 2,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 280mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "210mm x 460mm x 428mm",
+      "weight": "8.1kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "bottom"],
+      "features": ["Dual Tempered Glass Panels", "Cable Management", "RGB Lighting"]
+    },
+    {
+      "type": "CASE",
+      "name": "Thermaltake Core P3",
+      "brand": "Thermaltake",
+      "form_factor": "Open Frame",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX"],
+      "max_gpu_length": 330,
+      "max_cpu_cooler_height": 180,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 2,
+        "3_5inch": 1
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "audio": 1
+      },
+      "fans": {
+        "pre_installed": 1,
+        "fan_mounts": {
+          "front": 2,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 360mm",
+        "top_radiator": "up to 240mm",
+        "rear_radiator": "120mm"
+      },
+      "dimensions": "450mm x 600mm x 370mm",
+      "weight": "8.4kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["bottom"],
+      "features": ["Open Frame", "Tempered Glass Side Panel", "High Cooling Potential"]
+    },
+    {
+      "type": "CASE",
+      "name": "Cooler Master HAF 700",
+      "brand": "Cooler Master",
+      "form_factor": "Full Tower",
+      "motherboard_compatibility": ["ATX", "Micro ATX", "Mini ITX", "E-ATX"],
+      "max_gpu_length": 420,
+      "max_cpu_cooler_height": 200,
+      "psu_compatibility": ["ATX"],
+      "drive_bays": {
+        "2_5inch": 4,
+        "3_5inch": 3
+      },
+      "front_panel_ports": {
+        "usb_3_0": 2,
+        "usb_c": 1,
+        "audio": 1
+      },
+      "fans": {
+        "pre_installed": 3,
+        "fan_mounts": {
+          "front": 3,
+          "top": 3,
+          "rear": 1
+        }
+      },
+      "cooling_support": {
+        "front_radiator": "up to 420mm",
+        "top_radiator": "up to 360mm",
+        "rear_radiator": "140mm"
+      },
+      "dimensions": "249mm x 520mm x 602mm",
+      "weight": "13.6kg",
+      "material": "Steel, Tempered Glass",
+      "color": "Black",
+      "dust_filters": ["front", "bottom", "top"],
+      "features": ["Modular Design", "RGB Fans", "High Cooling Potential"]
+    },
+
+
+
+
+
+    {
+      "type": "COOLING",
+      "name": "Arctic Freezer 34 eSports Duo",
+      "brand": "Arctic",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200"],
+      "tdp_support": 200,
+      "fan_count": 2,
+      "fan_size": 120,
+      "dimensions": "124mm x 157mm x 103mm",
+      "weight": 764,
+      "noise_level": "24.5 dBA",
+      "rpm_range": "200-2100",
+      "airflow": "68 CFM",
+      "features": ["Dual Fan", "Direct Contact Heatpipes", "High Static Pressure"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Noctua NH-D15",
+      "brand": "Noctua",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200", "LGA1700"],
+      "tdp_support": 250,
+      "fan_count": 2,
+      "fan_size": 140,
+      "dimensions": "150mm x 160mm x 135mm",
+      "weight": 1320,
+      "noise_level": "19.2 dBA",
+      "rpm_range": "300-1500",
+      "airflow": "82.5 CFM",
+      "features": ["Dual Tower", "Premium Build Quality", "Low Noise Adapters"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Cooler Master Hyper 212 Black Edition",
+      "brand": "Cooler Master",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1200", "LGA1151"],
+      "tdp_support": 180,
+      "fan_count": 1,
+      "fan_size": 120,
+      "dimensions": "120mm x 159mm x 79.6mm",
+      "weight": 710,
+      "noise_level": "26 dBA",
+      "rpm_range": "650-2000",
+      "airflow": "57.3 CFM",
+      "features": ["Black Coating", "Direct Contact Heatpipes", "Silent Fan"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Corsair iCUE H150i Elite Capellix",
+      "brand": "Corsair",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1700", "LGA1200"],
+      "tdp_support": 300,
+      "fan_count": 3,
+      "fan_size": 120,
+      "dimensions": "397mm x 120mm x 27mm (radiator)",
+      "weight": 980,
+      "noise_level": "20 dBA",
+      "rpm_range": "400-2400",
+      "airflow": "75 CFM",
+      "features": ["RGB Lighting", "Zero RPM Mode", "Software Control"]
+    },
+    {
+      "type": "COOLING",
+      "name": "be quiet! Dark Rock Pro 4",
+      "brand": "be quiet!",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200", "LGA1700"],
+      "tdp_support": 250,
+      "fan_count": 2,
+      "fan_size": 120,
+      "dimensions": "136mm x 163mm x 123mm",
+      "weight": 1130,
+      "noise_level": "24.3 dBA",
+      "rpm_range": "500-1500",
+      "airflow": "70.8 CFM",
+      "features": ["Dual Fan", "Silent Wings Technology", "Premium Build"]
+    },
+    {
+      "type": "COOLING",
+      "name": "NZXT Kraken Z73 RGB",
+      "brand": "NZXT",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1700", "LGA1200"],
+      "tdp_support": 300,
+      "fan_count": 3,
+      "fan_size": 120,
+      "dimensions": "394mm x 121mm x 27mm (radiator)",
+      "weight": 1100,
+      "noise_level": "21 dBA",
+      "rpm_range": "500-2000",
+      "airflow": "73.1 CFM",
+      "features": ["Customizable LCD Display", "RGB Lighting", "Silent Operation"]
+    },
+    {
+      "type": "COOLING",
+      "name": "DeepCool Assassin III",
+      "brand": "DeepCool",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1200", "LGA1700"],
+      "tdp_support": 280,
+      "fan_count": 2,
+      "fan_size": 140,
+      "dimensions": "161mm x 140mm x 165mm",
+      "weight": 1460,
+      "noise_level": "29.5 dBA",
+      "rpm_range": "400-1400",
+      "airflow": "90 CFM",
+      "features": ["High Efficiency", "Dual Tower Design", "Premium Fans"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Thermalright Macho Rev. C",
+      "brand": "Thermalright",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200"],
+      "tdp_support": 220,
+      "fan_count": 1,
+      "fan_size": 140,
+      "dimensions": "162mm x 150mm x 129mm",
+      "weight": 780,
+      "noise_level": "23 dBA",
+      "rpm_range": "300-1300",
+      "airflow": "73 CFM",
+      "features": ["Asymmetric Design", "Silent Operation", "High Performance"]
+    },
+    {
+      "type": "COOLING",
+      "name": "EVGA CLC 280",
+      "brand": "EVGA",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1200", "LGA1700"],
+      "tdp_support": 280,
+      "fan_count": 2,
+      "fan_size": 140,
+      "dimensions": "312mm x 139mm x 27mm (radiator)",
+      "weight": 1200,
+      "noise_level": "22 dBA",
+      "rpm_range": "600-2200",
+      "airflow": "113 CFM",
+      "features": ["RGB Lighting", "EVGA Software Control", "Silent Fans"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Arctic Liquid Freezer II 280",
+      "brand": "Arctic",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200"],
+      "tdp_support": 300,
+      "fan_count": 2,
+      "fan_size": 140,
+      "dimensions": "317mm x 138mm x 38mm (radiator)",
+      "weight": 890,
+      "noise_level": "18 dBA",
+      "rpm_range": "200-1700",
+      "airflow": "72 CFM",
+      "features": ["Integrated VRM Fan", "Efficient Pump", "Quiet Performance"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Thermaltake Floe Ring RGB 360",
+      "brand": "Thermaltake",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1700", "LGA1200"],
+      "tdp_support": 350,
+      "fan_count": 3,
+      "fan_size": 120,
+      "dimensions": "394mm x 120mm x 27mm (radiator)",
+      "weight": 1150,
+      "noise_level": "25 dBA",
+      "rpm_range": "500-2000",
+      "airflow": "77 CFM",
+      "features": ["RGB Lighting", "Software Control", "Efficient Cooling"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Scythe Fuma 2",
+      "brand": "Scythe",
+      "cooling_type": "Air",
+      "socket_compatibility": ["AM4", "LGA1151", "LGA1200"],
+      "tdp_support": 230,
+      "fan_count": 2,
+      "fan_size": 120,
+      "dimensions": "137mm x 154.5mm x 131mm",
+      "weight": 1000,
+      "noise_level": "23.2 dBA",
+      "rpm_range": "300-1200",
+      "airflow": "79 CFM",
+      "features": ["Asymmetric Design", "Silent Fans", "Compact Size"]
+    },
+    {
+      "type": "COOLING",
+      "name": "Corsair H100i RGB Platinum",
+      "brand": "Corsair",
+      "cooling_type": "Liquid",
+      "socket_compatibility": ["AM4", "LGA1200", "LGA1151"],
+      "tdp_support": 300,
+      "fan_count": 2,
+      "fan_size": 120,
+      "dimensions": "277mm x 120mm x 27mm (radiator)",
+      "weight": 870,
+      "noise_level": "21 dBA",
+      "rpm_range": "400-2400",
+      "airflow": "75 CFM",
+      "features": ["RGB Lighting", "High Performance", "Zero RPM Mode"]
+    }
+  ]
+}
