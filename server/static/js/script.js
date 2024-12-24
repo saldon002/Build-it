@@ -35,11 +35,6 @@ function loadComponents() {
 }
 
 
-
-
-
-
-
 function loadCompatibleMotherboards() {
     var selectedCPU = $('#cpu').val();
 
