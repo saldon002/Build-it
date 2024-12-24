@@ -19,14 +19,17 @@ def register_routes(app, mongo):
     @app.route('/api/get_components', methods=['GET'])
     def get_components():
         components = mongo.db.components.find()
-        cpu = []
-        gpu = []
+        grouped_components = {}
+
         for item in components:
-            if item['type'] == 'CPU':
-                cpu.append({"_id": str(item["_id"]), "name": item["name"]})
-            elif item['type'] == 'GPU':
-                gpu.append({"_id": str(item["_id"]), "name": item["name"]})
-        return jsonify({"cpu": cpu, "gpu": gpu})
+            component_type = item['type']
+            # Aggiungi il tipo di componente al dizionario se non esiste
+            if component_type not in grouped_components:
+                grouped_components[component_type] = []
+            # Aggiungi il componente al tipo corrispondente
+            grouped_components[component_type].append({"_id": str(item["_id"]), "name": item["name"]})
+
+        return jsonify(grouped_components)
 
 
     # Endpoint per ottenere componenti compatibili (es. motherboard per una CPU specifica)
