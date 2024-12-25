@@ -1,0 +1,49 @@
+#selected-components-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--background-color);  /* Usa il blu cobalto scuro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);  /* Ombra delicata */
+    position: relative;  /* Assicurati che il contenitore possa adattarsi agli elementi esterni */
+}
+
+#selected-components-container h3 {
+    font-size: 1.5em;
+    color: var(--accent-color);  /* Usa il colore dell'accento */
+    margin-bottom: 15px;
+}
+
+#selected-components-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: none;  /* Rimuovi la limitazione sull'altezza */
+}
+
+#selected-components-list li {
+    background-color: #2a3656;  /* Blu scuro per il background degli item */
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #3f4c6b;  /* Blu più chiaro per il bordo */
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;  /* Solo la transizione per il colore di hover */
+}
+
+#selected-components-list li:hover {
+    background-color: var(--hover-color);  /* Usa il blu più chiaro per l'hover */
+}
+
+#selected-components-list li strong {
+    font-weight: bold;
+    color: var(--accent-color);  /* Usa il colore dell'accento per il nome del componente */
+}
+
+/* Rimuovi il max-height e overflow, così la lista non sarà limitata in altezza */
+#selected-components-list {
+    max-height: none;
+    overflow-y: visible;
+}
