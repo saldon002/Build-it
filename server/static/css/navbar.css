@@ -1,30 +1,4 @@
-:root {
-    --background-color: #1a2238; /* Blu cobalto scuro */
-    --accent-color: #a9b1bc; /* Argento per testo e dettagli */
-    --text-color: #d1d5db; /* Grigio chiaro per il testo */
-    --dropdown-bg: #2a3656; /* Blu scuro per il dropdown */
-    --hover-color: #3f4c6b; /* Blu più chiaro per hover */
-    --shadow-color: rgba(0, 0, 0, 0.25); /* Ombra delicata */
-}
-
-.navbar {
-    background-color: var(--background-color);
-    height: 80px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 6px var(--shadow-color);
-}
-
-.navbar h1.logo {
-    display: flex;
-    align-items: center;
-    font-size: 1.8rem;
-    color: var(--text-color);
-    margin: 0;
-}
-
+/* Logo's style*/
 .logo_img {
     width: 35px;
     height: auto;
@@ -32,58 +6,14 @@
     margin-left: 10px;
 }
 
+/* Logo's image style*/
 .logo {
     color: var(--text-color);
     font-size: 30px;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-}
 
-.navbar ul li {
-    padding: 10px 30px;
-    position: relative;
-}
 
-.navbar ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-.navbar ul li a:hover {
-    color: var(--hover-color);
-
-}
-
-.dropdown-content {
-    display: none;
-}
-
-.navbar ul li:hover .dropdown-content {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: var(--background-color);
-}
-
-.navbar ul li:hover .dropdown-content ul {
-    display: block;
-    margin: 10px;
-}
-
-.navbar ul li:hover .dropdown-content ul li {
-    width: 80px;
-    padding: 10px;
-}
-
-.navbar ul li:hover .dropdown-content ul li:hover {
-    background-color: var(--hover-color);
-}
 
 
 
