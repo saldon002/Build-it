@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build-it</title>
-  <!--My files-->
+
   <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/summary.css') }}">
   <!-- Script Bootstrap css-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #1a2238; color: #d1d5db;">
 
@@ -32,18 +34,19 @@
 
     <!-- Lista dei componenti selezionati -->
     <div id="selected-components-container">
-        <h3>Selected Components:</h3>
         <ul id="selected-components-list">
-            <!-- La lista verrà popolata dinamicamente tramite JavaScript -->
+            <!-- dinamic list -->
         </ul>
     </div>
+
+
 
     <div class="text-center">
         <a href="/builder" class="btn btn-primary mt-4">Back to Builder</a>
     </div>
 </main>
 
-<!-- Footer (Copyrights) -->
+<!-- Footer -->
 <footer class="text-center mt-5" style="background-color: var(--background-color); color: var(--text-color); padding: 15px;">
   <p>&copy; 2025 Build-it. All rights reserved.</p>
 </footer>
