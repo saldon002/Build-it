@@ -49,6 +49,7 @@ footer {
     bottom: 0;
     width: 100%;
     letter-spacing: 0.5px;
+
 }
 
 footer p {
@@ -59,8 +60,9 @@ body {
     padding-bottom: 50px; /* Altezza del footer */
 }
 
-/* Contenuto principale */
+/* Main content */
 main {
+    text-align: justify;
     padding: 20px;
     margin-bottom: 60px;
     max-width: 800px;
