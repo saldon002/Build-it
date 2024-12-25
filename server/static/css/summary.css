@@ -1,0 +1,51 @@
+/* Styling per la sezione dei componenti selezionati */
+#selected-components-container {
+    background-color: var(--background-color); /* Blu scuro della tua palette */
+    padding: 25px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+#selected-components-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#selected-components-list li {
+    background-color: #2a3656; /* Blu scuro per ogni componente */
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: var(--text-color); /* Grigio chiaro per il testo */
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Pulsante a destra */
+#selected-components-list li button {
+    background-color: var(--accent-color); /* Argento per il bottone */
+    color: var(--background-color); /* Colore del testo sul bottone */
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#selected-components-list li button:hover {
+    background-color: #3f4c6b; /* Colore hover blu più chiaro */
+}
+
+/* Messaggio quando non ci sono componenti selezionati */
+#selected-components-container p {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px;
+}
