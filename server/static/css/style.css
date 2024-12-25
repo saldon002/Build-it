@@ -7,12 +7,15 @@
 }
 
 /* Body */
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%; /* La pagina occupa l'intera altezza della finestra */
     margin: 0;
     padding: 0;
-    background-color: var(--background-color); /* Blu cobalto scuro */
+    display: flex;
+    flex-direction: column; /* Layout a colonne */
+    background-color: var(--background-color);
     color: var(--text-color);
+    font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -37,7 +40,18 @@ header h1:hover {
     color: var(--text-color);
 }
 
-/* Stop Footer  */
+/* Main content */
+main {
+    flex: 1; /* Riempie lo spazio disponibile */
+    text-align: justify;
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Footer */
 footer {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -45,28 +59,10 @@ footer {
     padding: 15px;
     box-shadow: 0 -4px 6px var(--shadow-color);
     font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     letter-spacing: 0.5px;
-
 }
 
 footer p {
     margin: 0;
-}
-
-body {
-    padding-bottom: 50px; /* Altezza del footer */
-}
-
-/* Main content */
-main {
-    text-align: justify;
-    padding: 20px;
-    margin-bottom: 60px;
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-    color: var(--text-color);
 }
