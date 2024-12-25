@@ -6,14 +6,16 @@ from bson import ObjectId
 def register_routes(app, mongo):
     @app.route('/')
     def index():
-        # Serve index.html file
         return render_template('index.html')
 
 
-    @app.route('/configuration')
-    def configuration():
-        # Serve builder.html dinamic page
+    @app.route('/builder')
+    def builder():
         return render_template('builder.html')
+
+    @app.route('/summary')
+    def summary():
+        return render_template('summary.html')
 
 
     # Endpoint per ottenere tutti i componenti (CPU e GPU)
@@ -65,6 +67,3 @@ def register_routes(app, mongo):
 
         except Exception as e:
             return jsonify({"error": str(e)}), 500
-
-
-
