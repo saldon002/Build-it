@@ -13,11 +13,18 @@
 </head>
 <body style="background-color: #1a2238; color: #d1d5db;">
 
-<!-- Left Logo-->
-<a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
-  <img src="../static/images/favicon.png" alt="Logo" class="logo_img me-2" style="width: 35px; height: auto;">
-  <span style="font-size: 1.8rem; font-weight: bold; color: var(--text-color);">Build-it</span>
-</a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--background-color);">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
+      <img src="../static/images/favicon.png" alt="Logo" class="logo_img me-2" style="width: 35px; height: auto;">
+      <span style="font-size: 1.8rem; font-weight: bold; color: var(--text-color);">Build-it</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
 
 
 <!-- Main Section and texts -->
@@ -45,7 +52,7 @@
 </main>
 
 <!-- Footer (Copyrights) -->
-<footer class="footer text-center" style="background-color: var(--background-color); color: var(--text-color); padding: 15px;">
+<footer class="text-center mt-5" style="background-color: var(--background-color); color: var(--text-color); padding: 15px;">
   <p>&copy; 2025 Build-it. All rights reserved.</p>
 </footer>
 
