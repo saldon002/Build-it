@@ -28,6 +28,17 @@ $("select").change(function() {
     }
 });
 
+
+// Listener per il click del pulsante "Next Step"
+$("#next-step-btn").on("click", function() {
+    if (!$(this).prop("disabled")) {
+        // Salva l'array selectedComponents nel localStorage
+        localStorage.setItem("selectedComponents", JSON.stringify(selectedComponents));
+        window.location.replace("/summary");
+    }
+});
+
+
 // Listener per il bottone "Reset"
 $('#reset-button').on('click', function() {
     // Ripristina i componenti selezionati
