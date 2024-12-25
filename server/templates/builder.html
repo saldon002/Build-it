@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,7 @@
     <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/builder.css') }}">
     <!-- Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -49,60 +50,99 @@
 <main class="container mt-5">
     <h2 class="text-center">Build Your PC</h2>
 
-    <!-- Component Selectors -->
-    <div class="row">
-        <div class="col-md-4">
-            <label for="cpu">Choose CPU:</label>
-            <select id="cpu" class="form-select">
+    <!-- Progress bar -->
+    <div class="container mt-3">
+        <div class="progress">
+            <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+    </div>
+
+    <!-- Centro contenuti -->
+    <div class="mt-4 mx-auto" style="max-width: 600px;">
+        <!-- Selezione CPU -->
+        <div class="mb-3">
+            <label for="cpu" class="form-label">Choose CPU:</label>
+            <select id="cpu" class="form-select" onchange="loadCompatibleMotherboards()">
                 <option value="">Select CPU</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
         </div>
-        <div class="col-md-4">
-            <label for="gpu">Choose GPU:</label>
-            <select id="gpu" class="form-select">
-                <option value="">Select GPU</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label for="mobo">Choose Motherboard:</label>
+
+        <!-- Selezione Motherboard -->
+        <div class="mb-3">
+            <label for="mobo" class="form-label">Choose Motherboard:</label>
             <select id="mobo" class="form-select">
                 <option value="">Select Motherboard</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
         </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-4">
-            <label for="ram">Choose RAM:</label>
+
+        <!-- Selezione RAM -->
+        <div class="mb-3">
+            <label for="ram" class="form-label">Choose RAM:</label>
             <select id="ram" class="form-select">
                 <option value="">Select RAM</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
         </div>
-        <div class="col-md-4">
-            <label for="storage">Choose Storage:</label>
+
+        <!-- Selezione COOLING -->
+        <div class="mb-3">
+            <label for="cooling" class="form-label">Choose Cooling:</label>
+            <select id="cooling" class="form-select">
+                <option value="">Select Cooling</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
+            </select>
+        </div>
+
+        <!-- Selezione GPU -->
+        <div class="mb-3">
+            <label for="gpu" class="form-label">Choose GPU:</label>
+            <select id="gpu" class="form-select">
+                <option value="">Select GPU</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
+            </select>
+        </div>
+
+
+        <!-- Selezione STORAGE -->
+        <div class="mb-3">
+            <label for="storage" class="form-label">Choose Storage:</label>
             <select id="storage" class="form-select">
                 <option value="">Select Storage</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
         </div>
-        <div class="col-md-4">
-            <label for="psu">Choose Power Supply:</label>
+
+        <!-- Selezione PSU -->
+        <div class="mb-3">
+            <label for="psu" class="form-label">Choose Power Supply:</label>
             <select id="psu" class="form-select">
                 <option value="">Select Power Supply</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
+            </select>
+        </div>
+
+        <!-- Selezione CASE -->
+        <div class="mb-3">
+            <label for="case" class="form-label">Choose Case:</label>
+            <select id="case" class="form-select">
+                <option value="">Select Case</option>
+                <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
         </div>
     </div>
-    <div class="row mt-3">
-        <div class="col-md-4">
-            <label for="case">Choose Case:</label>
-            <select id="case" class="form-select">
-                <option value="">Select Case</option>
-            </select>
-        </div>
-        <div class="col-md-4">
-            <label for="cooling">Choose Cooling:</label>
-            <select id="cooling" class="form-select">
-                <option value="">Select Cooling</option>
-            </select>
-        </div>
+
+
+    <div id="selected-components-container" style="display:none;">
+        <h3>Selected Components:</h3>
+        <ul id="selected-components-list"></ul>
+    </div>
+
+    <!-- Button to proceed to the next step -->
+    <div class="text-center">
+        <button id="reset-button" class="btn btn-primary mt-4" disabled>Reset</button>
+        <button id="next-step-btn" class="btn btn-primary mt-4" disabled>Next Step</button>
     </div>
 </main>
 
@@ -117,7 +157,5 @@
 
 <!-- Custom scripts -->
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
-
 </body>
 </html>
