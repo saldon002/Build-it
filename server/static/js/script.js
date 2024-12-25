@@ -1,60 +1,52 @@
-$(document).ready(function() {
-    loadComponents();
+// Variabili globali
+const components = ['cpu', 'mobo', 'ram', 'cooling', 'gpu', 'storage', 'psu', 'case'];
+let selectedComponents = {};  // Oggetto per memorizzare nome e ID del componente
+
+// Caricamento degli script necessari
+$.getScript("/static/js/progress.js", function() {
+    console.log("progress.js loaded");
+    initializeProgressBar(); // Inizializza la barra di progresso
 });
 
-function loadComponents() {
-    // Load all component options from the backend
-    $.ajax({
-        url: '/api/get_components',
-        method: 'GET',
-        success: function(data) {
-            // Loop through each component type returned by the backend
-            Object.keys(data).forEach(function(type) {
-                // Use the type to find the corresponding select element
-                const selectElement = $(`#${type.toLowerCase()}`);
+$.getScript("/static/js/selection.js", function() {
+    console.log("selection.js loaded");
+    loadComponents(); // Carica i componenti al caricamento della pagina
+    updateSelectableComponents(); // Impostiamo la logica di selezione dei componenti
+});
 
-                // Check if the select element exists
-                if (selectElement.length) {
-                    // Clear existing options
-                    selectElement.empty();
-                    // Add a default option
-                    selectElement.append(new Option(`Select ${type}`, ""));
-                    // Populate the select element with the components
-                    data[type].forEach(function(component) {
-                        selectElement.append(new Option(component.name, component._id));
-                    });
-                } else {
-                    console.warn(`No select element found for type: ${type}`);
-                }
-            });
-        },
-        error: function(error) {
-            console.log('Error loading components:', error);
-        }
-    });
-}
+$.getScript("/static/js/compatibility.js", function() {
+    console.log("compatibility.js loaded");
+    loadCompatibleMotherboards(); // Load compatible mobo
+})
 
-
-function loadCompatibleMotherboards() {
-    var selectedCPU = $('#cpu').val();
-
-    if (selectedCPU) {
-        $.ajax({
-            url: '/api/get_compatible_motherboards/' + selectedCPU,
-            method: 'GET',
-            success: function(data) {
-                $('#motherboard').empty();
-                $('#motherboard').append(new Option("Select Motherboard", ""));
-                data.forEach(function(motherboard) {
-                    $('#motherboard').append(new Option(motherboard.name, motherboard._id));
-                });
-            },
-            error: function(error) {
-                console.log('Error loading motherboards', error);
-            }
-        });
+// Listener per abilitare/disabilitare il pulsante "Next Step" in base alla selezione
+$("select").change(function() {
+    if (checkIfAllComponentsSelected()) {
+        $("#next-step-btn").prop("disabled", false);
     } else {
-        $('#motherboard').empty();
-        $('#motherboard').append(new Option("Select Motherboard", ""));
+        $("#next-step-btn").prop("disabled", true);
     }
-}
+});
+
+// Listener per il bottone "Reset"
+$('#reset-button').on('click', function() {
+    // Ripristina i componenti selezionati
+    selectedComponents = {};  // Resetta l'oggetto dei componenti selezionati
+    components.forEach(component => {
+        $(`#${component}`).val('');  // Resetta tutte le selezioni
+        $(`#${component}`).parent().show();  // Mostra il primo componente
+    });
+
+    // Ripristina la lista dei componenti selezionati
+    $("#selected-components-list").empty();
+    $("#selected-components-container").hide();  // Nascondi la lista dei componenti selezionati
+
+    // Ripristina la barra di progresso
+    updateProgressBar(0, components.length);
+
+    // Disabilita Pulsanti
+    $('#next-step-btn').prop('disabled', true);
+    $('#reset-button').prop('disabled', true);
+
+    updateSelectableComponents()
+});
