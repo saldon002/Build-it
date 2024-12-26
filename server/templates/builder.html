@@ -46,7 +46,7 @@
         <!-- Selezione CPU -->
         <div class="mb-3">
             <label for="cpu" class="form-label">Choose CPU:</label>
-            <select id="cpu" class="form-select" onchange="loadCompatibleMotherboards()">
+            <select id="cpu" class="form-select" onchange="loadCompatibleComponents(this)">
                 <option value="">Select CPU</option>
                 <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
@@ -55,7 +55,7 @@
         <!-- Selezione Motherboard -->
         <div class="mb-3">
             <label for="mobo" class="form-label">Choose Motherboard:</label>
-            <select id="mobo" class="form-select">
+            <select id="mobo" class="form-select" onchange="loadCompatibleComponents(this)">
                 <option value="">Select Motherboard</option>
                 <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
@@ -82,7 +82,7 @@
         <!-- Selezione GPU -->
         <div class="mb-3">
             <label for="gpu" class="form-label">Choose GPU:</label>
-            <select id="gpu" class="form-select">
+            <select id="gpu" class="form-select" onchange="loadCompatibleComponents(this)">
                 <option value="">Select GPU</option>
                 <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
@@ -101,7 +101,7 @@
         <!-- Selezione PSU -->
         <div class="mb-3">
             <label for="psu" class="form-label">Choose Power Supply:</label>
-            <select id="psu" class="form-select">
+            <select id="psu" class="form-select" onchange="loadCompatibleComponents(this)">
                 <option value="">Select Power Supply</option>
                 <!-- Le opzioni saranno caricate dinamicamente -->
             </select>
