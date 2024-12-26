@@ -20,6 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
             searchButton.classList.add("btn", "btn-primary", "btn-search-amazon");
             searchButton.setAttribute("data-component-name", compData.name);
 
+            // Disabilita il pulsante se il nome del componente è "None"
+            if (compData.name === "None") {
+                searchButton.disabled = true;
+            }
+
             listItem.appendChild(searchButton);
             selectedList.appendChild(listItem);
         });
