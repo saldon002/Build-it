@@ -1,3 +1,4 @@
+// Riempimento dinamico
 document.addEventListener("DOMContentLoaded", function() {
     // Recupera i dati dal localStorage
     const selectedComponents = JSON.parse(localStorage.getItem("selectedComponents"));
