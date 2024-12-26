@@ -16,7 +16,7 @@ $.getScript("/static/js/selection.js", function() {
 
 $.getScript("/static/js/compatibility.js", function() {
     console.log("compatibility.js loaded");
-    loadCompatibleMotherboards(); // Load compatible mobo
+    loadCompatibleMotherboards();
 })
 
 // Listener per abilitare/disabilitare il pulsante "Next Step" in base alla selezione
