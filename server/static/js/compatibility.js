@@ -1,65 +1,68 @@
+// Get the component type and selected value from the dropdown
 function loadCompatibleComponents(selectElement) {
     var componentType = $(selectElement).attr('id');
     var selectedValue = $(selectElement).val();
 
     if (!selectedValue) {
-        console.warn("No value selected for:", componentType);
+        console.warn("No value selected for:", componentType); // Log a warning if no value is selected
         return;
     }
 
+    // Depending on the selected component, load compatible components
     switch (componentType) {
         case 'cpu':
-            loadCompatibleMoboCooling();
+            loadCompatibleMoboCooling(); // Load compatible motherboards and cooling solutions
             break;
         case 'mobo':
-            loadCompatibleRamGpuStorage();
+            loadCompatibleRamGpuStorage(); // Load compatible RAM, GPU, and storage components
             break;
         case 'gpu':
-            loadCompatiblePSU();
+            loadCompatiblePSU(); // Load compatible PSU
             break;
         case 'psu':
-            loadCompatibleCases();
+            loadCompatibleCases(); // Load compatible cases
             break;
         default:
-            console.error("Unhandled component type:", componentType);
+            console.error("Unhandled component type:", componentType); // Log an error for unsupported components
     }
 }
 
 
+
 function loadCompatibleMoboCooling() {
-    var selectedCPU = $('#cpu').val(); // Ottieni la CPU selezionata
+    var selectedCPU = $('#cpu').val();  // Get the selected CPU
 
     if (selectedCPU) {
         $.ajax({
-            url: `/api/get_compatible_mobo_cooling/${selectedCPU}`,
+            url: `/api/get_compatible_mobo_cooling/${selectedCPU}`, // Make an API call to get compatible motherboards and coolers
             method: 'GET',
             success: function(data) {
-                console.log(data); // Debugging: stampa i dati ricevuti
+                console.log(data); // Debugging: print the received data
 
-                // Gestisci le MOBO
-                $('#mobo').empty(); // Svuota il menu a discesa delle MOBO
-                $('#mobo').append(new Option("Select Motherboard", "")); // Opzione predefinita
+                // Handle the motherboard dropdown
+                $('#mobo').empty(); // Clear the current options
+                $('#mobo').append(new Option("Select Motherboard", "")); // Add a default option
                 if (data.error) {
-                    console.log(data.error);
+                    console.log(data.error); // Log any errors in the data response
                 } else {
                     data.motherboards.forEach(function(mobo) {
-                        $('#mobo').append(new Option(mobo.name, mobo._id)); // Aggiungi ogni MOBO compatibile
+                        $('#mobo').append(new Option(mobo.name, mobo._id)); // Add each compatible motherboard to the dropdown
                     });
                 }
 
-                // Gestisci i dissipatori di calore (coolers)
-                $('#cooling').empty(); // Svuota il menu a discesa dei dissipatori
-                $('#cooling').append(new Option("Select Cooling", "")); // Opzione predefinita
+                // Handle the cooling solution dropdown
+                $('#cooling').empty();
+                $('#cooling').append(new Option("Select Cooling", ""));
                 data.coolers.forEach(function(cooler) {
-                    $('#cooling').append(new Option(cooler.name, cooler._id)); // Aggiungi ogni dissipatore compatibile
+                    $('#cooling').append(new Option(cooler.name, cooler._id));
                 });
             },
             error: function(error) {
-                console.error('Error loading motherboards and coolers:', error);
+                console.error('Error loading motherboards and coolers:', error); // Log any errors during the API call
             }
         });
     } else {
-        // Se non è selezionata una CPU, svuota entrambi i menu
+        // If no CPU is selected, clear both the motherboard and cooling dropdowns
         $('#mobo').empty();
         $('#mobo').append(new Option("Select Motherboard", ""));
         $('#cooling').empty();
@@ -67,19 +70,18 @@ function loadCompatibleMoboCooling() {
     }
 }
 
-
 function loadCompatibleRamGpuStorage() {
     var selectedCPU = $('#cpu').val();
     var selectedMOBO = $('#mobo').val();
 
     if (selectedCPU && selectedMOBO) {
         $.ajax({
-            url: `/api/get_compatible_ram_gpu_storage/${selectedCPU}/${selectedMOBO}`,
+            url: `/api/get_compatible_ram_gpu_storage/${selectedCPU}/${selectedMOBO}`, // API call for compatible RAM, GPU, and storage
             method: 'GET',
             success: function(data) {
-                console.log(data); // Debugging: stampa i dati ricevuti
+                console.log(data); // Debugging: print the received data
 
-                // Gestisci le RAM
+                // Handle the RAM dropdown
                 $('#ram').empty();
                 $('#ram').append(new Option("Select RAM", ""));
                 if (data.rams) {
@@ -88,7 +90,7 @@ function loadCompatibleRamGpuStorage() {
                     });
                 }
 
-                // Gestisci le GPU
+                // Handle the GPU dropdown
                 $('#gpu').empty();
                 $('#gpu').append(new Option("Select GPU", ""));
                 if (data.gpus) {
@@ -97,7 +99,7 @@ function loadCompatibleRamGpuStorage() {
                     });
                 }
 
-                // Gestisci lo Storage
+                // Handle the storage dropdown
                 $('#storage').empty();
                 $('#storage').append(new Option("Select Storage", ""));
                 if (data.storage) {
@@ -111,7 +113,7 @@ function loadCompatibleRamGpuStorage() {
             }
         });
     } else {
-        // Resetta i menu a discesa se CPU o MOBO non sono selezionati
+        // If CPU or motherboard is not selected, reset the RAM, GPU, and storage dropdowns
         $('#ram').empty();
         $('#ram').append(new Option("Select RAM", ""));
         $('#gpu').empty();
@@ -127,19 +129,19 @@ function loadCompatiblePSU() {
 
     if (selectedCPU && selectedGPU) {
         $.ajax({
-            url: `/api/get_compatible_psu/${selectedCPU}/${selectedGPU}`,
+            url: `/api/get_compatible_psu/${selectedCPU}/${selectedGPU}`, // API call for compatible PSU
             method: 'GET',
             success: function(data) {
-                console.log(data); // Debugging: stampa i dati ricevuti
+                console.log(data); // Debugging: print the received data
 
-                // Gestisci i PSU
-                $('#psu').empty(); // Svuota il menu a discesa dei PSU
-                $('#psu').append(new Option("Select PSU", "")); // Opzione predefinita
+                // Handle the PSU dropdown
+                $('#psu').empty();
+                $('#psu').append(new Option("Select PSU", ""));
                 if (data.error) {
                     console.log(data.error);
                 } else {
                     data.forEach(function(psu) {
-                        $('#psu').append(new Option(psu.name, psu._id)); // Aggiungi ogni PSU compatibile
+                        $('#psu').append(new Option(psu.name, psu._id));
                     });
                 }
             },
@@ -148,7 +150,7 @@ function loadCompatiblePSU() {
             }
         });
     } else {
-        // Se non sono selezionati CPU o GPU, svuota il menu
+        // If no CPU or GPU is selected, reset the PSU dropdown
         $('#psu').empty();
         $('#psu').append(new Option("Select PSU", ""));
     }
@@ -161,20 +163,19 @@ function loadCompatibleCases() {
 
     if (selectedMOBO && selectedGPU && selectedPSU) {
         $.ajax({
-            url: `/api/get_compatible_case/${selectedMOBO}/${selectedGPU}/${selectedPSU}`,
+            url: `/api/get_compatible_case/${selectedMOBO}/${selectedGPU}/${selectedPSU}`, // API call for compatible cases
             method: 'GET',
             success: function(data) {
-                console.log(data); // Debugging: stampa i dati ricevuti
+                console.log(data); // Debugging: print the received data
 
-                // Gestisci i CASE
-                $('#case').empty(); // Svuota il menu a discesa dei CASE
-                $('#case').append(new Option("Select Case", "")); // Opzione predefinita
-
+                // Handle the case dropdown
+                $('#case').empty();
+                $('#case').append(new Option("Select Case", ""));
                 if (data.error) {
                     console.log(data.error);
                 } else {
-                    data.cases.forEach(function(c) {
-                        $('#case').append(new Option(c.name, c._id)); // Aggiungi ogni CASE compatibile
+                    data.cases.forEach(function(cas) {
+                        $('#case').append(new Option(cas.name, cas._id));
                     });
                 }
             },
@@ -183,7 +184,7 @@ function loadCompatibleCases() {
             }
         });
     } else {
-        // Se non sono selezionati tutti i componenti, svuota il menu
+        // If not all components (motherboard, GPU, and PSU) are selected, reset the case dropdown
         $('#case').empty();
         $('#case').append(new Option("Select Case", ""));
     }
