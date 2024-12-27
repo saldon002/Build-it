@@ -1,30 +1,30 @@
 services:
   # Flask application configuration
   flask-app:
-    build: .
-    container_name: flask-app
-    working_dir: /app
+    build: .  # Build the Docker image using the Dockerfile in the current directory
+    container_name: flask-app  # Name of the container for easier reference
+    working_dir: /app  # Set the working directory inside the container
     volumes:
-      - ./data/components.json:/app/data/components.json
+      - ./data/components.json:/app/data/components.json  # Bind mount the components.json file for persistent configuration
     ports:
-      - "5000:5000"
+      - "5000:5000"  # Map port 5000 on the host to port 5000 in the container
     environment:
-      - FLASK_APP=server/app.py
-      - FLASK_ENV=development
+      - FLASK_APP=server/app.py  # Specify the entry point of the Flask application
+      - FLASK_ENV=development  # Enable development mode for Flask
       - MONGO_URI=mongodb://mongodb:27017/mydatabase
       - SECRET_KEY=mysecretkey
     depends_on:
-      - mongodb  # MongoDB starts before the flask app
+      - mongodb  # Ensure MongoDB is started before the Flask app to avoid connection issues
 
   # MongoDB configuration
   mongodb:
     image: mongo:latest
-    container_name: mongodb
+    container_name: mongodb  # Name of the MongoDB container for easier reference
     ports:
-      - "27017:27017"
+      - "27017:27017"  # Map port 27017 on the host to port 27017 in the container
     volumes:
-      - mongo-data:/data/db
+      - mongo-data:/data/db  # Use a named volume to persist MongoDB data
 
 # Define volumes for persistent data
 volumes:
-  mongo-data:
+  mongo-data:  # Named volume to store MongoDB database files persistently
