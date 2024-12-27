@@ -30,78 +30,72 @@ function loadComponents() {
     });
 }
 
-
-
 function updateSelectableComponents() {
-    // Mostra solo il primo menu e nasconde gli altri
+    // Show only the first menu and hide the others
     components.forEach((component, index) => {
         const componentParent = $(`#${component}`).parent();
-        console.log("Visibilità del componente:", component, "Mostra:", index === 0);
+        console.log("Visibility of component:", component, "Show:", index === 0);
         if (index === 0) {
-            componentParent.show(); // Mostra solo il primo componente
+            componentParent.show();
         } else {
-            componentParent.hide().val(""); // Nasconde e resetta gli altri
+            componentParent.hide().val("");
         }
     });
 
-    // Aggiungi il listener per ogni selezione
+    // Add the event listener for each selection
     components.forEach((component, index) => {
         $(`#${component}`).on('change', function () {
             const selectedValue = $(this).val();
-            const selectedText = $(`#${component} option:selected`).text();  // Ottieni il nome del componente
-            console.log("Selezionato:", component, "Valore:", selectedValue);
+            const selectedText = $(`#${component} option:selected`).text();  // Get the component name
+            console.log("Selected:", component, "Value:", selectedValue);
 
             if (selectedValue) {
-                // Memorizza il tipo (componente) e il nome (selezionato)
+                // Store the type (component) and name (selected)
                 selectedComponents[component] = { type: component.charAt(0).toUpperCase() + component.slice(1), name: selectedText };
 
-                // Nascondi il menu corrente
-                console.log("Nascondo il componente:", component);
+                // Hide the current menu
+                console.log("Hiding component:", component);
                 $(`#${component}`).parent().hide();
 
-                // Mostra il prossimo menu
+                // Show the next menu
                 const nextComponent = components[index + 1];
                 if (nextComponent) {
-                    console.log("Mostro il prossimo componente:", nextComponent);
+                    console.log("Showing next component:", nextComponent);
                     $(`#${nextComponent}`).parent().show();
                 }
 
-                // Aggiorna la barra di progresso
+                // Update the progress bar
                 updateProgressBar(index + 1, components.length);
 
-                // Abilita Pulsante Reset
+                // Enable the Reset Button
                 if (Object.keys(selectedComponents).length > 0) {
                     $('#reset-button').prop('disabled', false);
                 }
             }
 
-            // Verifica se tutti i componenti sono stati selezionati
+            // Check if all components have been selected
             if (Object.keys(selectedComponents).length === components.length) {
-                showSelectedComponentsList();  // Mostra la lista dei componenti selezionati
-                // Abilita il bottone "Next Step"
-                $('#next-step-btn').prop('disabled', false);
+                showSelectedComponentsList();  // Show the list of selected components
+                $('#next-step-btn').prop('disabled', false);   // Enable the "Next Step" button
             }
         });
     });
 
-    // Inizializza la barra di progresso
+    // Initialize the progress bar
     updateProgressBar(0, components.length);
 }
 
-
-
 function showSelectedComponentsList() {
-    // Seleziona il contenitore per la lista
     const selectedList = $("#selected-components-list");
-    selectedList.empty();  // Pulisci la lista esistente
+    selectedList.empty();
 
-    // Aggiungi ciascun componente selezionato alla lista
+    // Add each selected component to the list
     Object.keys(selectedComponents).forEach((component) => {
-        const compData = selectedComponents[component]; // Nome e ID del componente
+        const compData = selectedComponents[component];
         const listItem = $(`<li><strong>${compData.type}:</strong> ${compData.name}</li>`);
-        selectedList.append(listItem);  // Aggiungi l'elemento alla lista
+        selectedList.append(listItem);
     });
 
-    // Mostra il contenitore della lista dei componenti selezionati
+    // Show the container for the selected components list
     $("#selected-components-container").show();
 }

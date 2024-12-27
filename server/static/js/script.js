@@ -1,62 +1,57 @@
-// Variabili globali
+// Global variables
 const components = ['cpu', 'mobo', 'ram', 'cooling', 'gpu', 'storage', 'psu', 'case'];
-let selectedComponents = {};  // Oggetto per memorizzare nome e ID del componente
+let selectedComponents = {};
 
-// Caricamento degli script necessari
+// Load necessary scripts
 $.getScript("/static/js/progress.js", function() {
     console.log("progress.js loaded");
-    initializeProgressBar(); // Inizializza la barra di progresso
+    initializeProgressBar(); // Initialize the progress bar
 });
 
 $.getScript("/static/js/selection.js", function() {
     console.log("selection.js loaded");
-    loadComponents(); // Carica i componenti al caricamento della pagina
-    updateSelectableComponents(); // Impostiamo la logica di selezione dei componenti
+    loadComponents(); // Load components when the page loads
+    updateSelectableComponents(); // Set up the logic for selecting components
 });
 
 $.getScript("/static/js/compatibility.js", function() {
     console.log("compatibility.js loaded");
 })
 
-// Listener per abilitare/disabilitare il pulsante "Next Step" in base alla selezione
+// Listener to enable/disable the "Next Step" button based on selection
 $("select").change(function() {
     if (checkIfAllComponentsSelected()) {
-        $("#next-step-btn").prop("disabled", false);
+        $("#next-step-btn").prop("disabled", false); // Enable the "Next Step" button if all components are selected
     } else {
-        $("#next-step-btn").prop("disabled", true);
+        $("#next-step-btn").prop("disabled", true); // Disable the "Next Step" button if not all components are selected
     }
 });
 
-
-// Listener per il click del pulsante "Next Step"
+// Listener for the "Next Step" button click
 $("#next-step-btn").on("click", function() {
     if (!$(this).prop("disabled")) {
-        // Salva l'array selectedComponents nel localStorage
-        localStorage.setItem("selectedComponents", JSON.stringify(selectedComponents));
-        window.location.replace("/summary");
+        localStorage.setItem("selectedComponents", JSON.stringify(selectedComponents)); // Save the selectedComponents object to localStorage
+        window.location.replace("/summary"); // Redirect to the summary page
     }
 });
 
-
-// Listener per il bottone "Reset"
+// Listener for the "Reset" button
 $('#reset-button').on('click', function() {
-    // Ripristina i componenti selezionati
-    selectedComponents = {};  // Resetta l'oggetto dei componenti selezionati
+    // Reset selected components
+    selectedComponents = {};  // Clear the selected components object
     components.forEach(component => {
-        $(`#${component}`).val('');  // Resetta tutte le selezioni
-        $(`#${component}`).parent().show();  // Mostra il primo componente
+        $(`#${component}`).val('');  // Reset all the selections
+        $(`#${component}`).parent().show();  // Show the first component's selection
     });
 
-    // Ripristina la lista dei componenti selezionati
-    $("#selected-components-list").empty();
-    $("#selected-components-container").hide();  // Nascondi la lista dei componenti selezionati
+    $("#selected-components-list").empty();   // Clear the selected components list
+    $("#selected-components-container").hide();  // Hide the selected components list
 
-    // Ripristina la barra di progresso
-    updateProgressBar(0, components.length);
+    updateProgressBar(0, components.length);   // Reset the progress bar
 
-    // Disabilita Pulsanti
+    // Disable buttons
     $('#next-step-btn').prop('disabled', true);
     $('#reset-button').prop('disabled', true);
 
-    updateSelectableComponents()
+    updateSelectableComponents() // Update the selectable components
 });

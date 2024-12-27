@@ -5,53 +5,60 @@ from flask_pymongo import PyMongo
 from server.config import Config
 from server.routes import register_routes
 
-# Create Flask app
+# Create Flask app instance
 app = Flask(__name__)
+
+# Load configuration settings from the Config class in server.config
 app.config.from_object(Config)
 
-# Initialize PyMongo
+# Initialize PyMongo for database interaction
 mongo = PyMongo(app)
 
 def populate_db():
-    """Popola il database MongoDB con i dati da components.json."""
+    """Populates the MongoDB database with data from components.json."""
     try:
         print("Populating database...")
 
-        # Controlla se il file components.json esiste
+        # Check if the components.json file exists at the specified path
         if not os.path.exists('/app/data/components.json'):
-            print("Errore: Il file components.json non è stato trovato.")
+            print("Error: components.json file not found.")
             return
 
-        # Leggi il file components.json
+        # Read the components.json file
         with open('/app/data/components.json', 'r') as file:
             data = json.load(file)
 
-        # Accedi alla chiave 'components', che contiene la lista
+        # Access the 'components' key in the JSON data which contains the list of components
         components = data.get('components', [])
 
-        # Se 'components' è vuoto o non presente, stampa un errore e interrompe l'esecuzione
+        # If 'components' is empty or not present, print an error and stop the execution
         if not components:
-            print("Errore: Il file components.json non contiene componenti validi.")
+            print("Error: The components.json file does not contain valid components.")
             return
 
-        # Controlla se il database è vuoto (solo al primo avvio o se i dati sono stati cancellati)
+        # Check if the 'components' collection in the MongoDB database is empty
+        # This ensures that the data is populated only on the first run or if data was deleted
         if mongo.db.components.find_one() is None:
-            # Pulisce il database (opzionale, solo al primo avvio)
-            mongo.db.components.delete_many({})  # Pulisce i dati preesistenti
+            # Optional: Clean the database (only on the first run or if data is to be reset)
+            mongo.db.components.delete_many({})  # Clears any pre-existing data
 
-            # Inserisce i dati nel database
+            # Insert the components data into the MongoDB collection
             mongo.db.components.insert_many(components)
-            print("Database popolato con successo!")
+            print("Database populated successfully!")
         else:
-            print("Il database contiene già dati. Nessun inserimento necessario.")
+            print("Database already contains data. No insertion needed.")
     except Exception as e:
-        print(f"Errore durante il popolamento del database: {e}")
+        # Log any errors that occur during the database population process
+        print(f"Error during database population: {e}")
 
 
-# Function Call
+# Call the function to populate the database with initial data
 populate_db()
-register_routes(app,mongo)
 
-# Avvia l'app Flask solo se il file viene eseguito direttamente
+# Register the application's routes
+register_routes(app, mongo)
+
+# Start the Flask app only if the script is run directly
 if __name__ == '__main__':
+    # Run the Flask app in debug mode on all available network interfaces
     app.run(debug=True, host='0.0.0.0')
