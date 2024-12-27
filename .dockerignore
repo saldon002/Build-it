@@ -1,3 +1,4 @@
+# Ignore files not needed in the Docker image
 .idea
 .git
 LICENSE
