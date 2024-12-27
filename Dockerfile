@@ -1,4 +1,4 @@
-# Use the official Python 3.9 slim image as the base image
+# Use a lightweight Python image to reduce container size
 FROM python:3.9-slim
 
 # Set the working directory inside the container
@@ -7,17 +7,17 @@ WORKDIR /app
 # Copy only the requirements.txt first to take advantage of Docker cache
 COPY requirements.txt /app/
 
-# Install the dependencies
+# Install the dependencies without caching to reduce image size
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all files into the container
+# Copy application code and other required files
 COPY . /app/
 
 # Set environment variables for Flask
 ENV FLASK_APP=server/app.py
 ENV FLASK_ENV=development
 
-# Expose the port that Flask runs on
+# Allows access to Flask on port 5000 from outside the container
 EXPOSE 5000
 
 # Set the default command to run Flask in development mode when the container starts
