@@ -4,27 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Build-it</title>
-
   <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/summary.css') }}">
-  <!-- Script Bootstrap css-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/summary.css') }}">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body style="background-color: #1a2238; color: #d1d5db;">
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--background-color);">
   <div class="container-fluid">
+
     <a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}">
       <img src="../static/images/favicon.png" alt="Logo" class="logo_img me-2" style="width: 35px; height: auto;">
       <span style="font-size: 1.8rem; font-weight: bold; color: var(--text-color);">Build-it</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
   </div>
 </nav>
 
@@ -32,15 +28,14 @@
 <main class="container mt-5">
     <h2 class="text-center">Your Selected Components</h2>
 
-    <!-- Lista dei componenti selezionati -->
+    <!-- List of selected components: Will be dynamically populated with the user's selections -->
     <div id="selected-components-container">
         <ul id="selected-components-list">
-            <!-- dinamic list -->
+            <!-- Dynamically generated list of selected components -->
         </ul>
     </div>
 
-
-
+    <!-- Button to go back to the builder page -->
     <div class="text-center">
         <a href="/builder" class="btn btn-primary mt-4">Back to Builder</a>
     </div>
@@ -51,7 +46,7 @@
   <p>&copy; 2025 Build-it. All rights reserved.</p>
 </footer>
 
-<!--Script Bootstrap js-->
+<!-- Bootstrap and jQuery scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{{ url_for('static', filename='js/summary.js') }}"></script>
 </body>
