@@ -34,24 +34,20 @@ def register_routes(app, mongo):
 
         return jsonify(grouped_components)
 
-
     @app.route('/api/get_compatible_mobo_cooling/<cpu_id>', methods=['GET'])
     def get_compatible_mobo_cooling(cpu_id):
         try:
-            # Trova la CPU selezionata
             selected_cpu = mongo.db.components.find_one({"_id": ObjectId(cpu_id), "type": "CPU"})
             if not selected_cpu:
                 return jsonify({"error": "CPU not found"}), 404
 
-            # Estrai le caratteristiche di compatibilità dalla CPU
             cpu_socket = selected_cpu.get("socket")
             cpu_chipsets = selected_cpu.get("chipset_compatibility", [])
             cpu_pcie = selected_cpu.get("pcie")
-            cpu_memory_type = "DDR4"  # Specifico per CPU in questo caso
             cpu_tdp = selected_cpu.get("tdp")
             cpu_thermal_solution = selected_cpu.get("thermal_solution")
+            cpu_memory_type = "DDR4"
 
-            # Trova tutte le schede madri compatibili
             compatible_motherboards = mongo.db.components.find({
                 "type": "MOBO",
                 "socket": cpu_socket,
@@ -60,24 +56,19 @@ def register_routes(app, mongo):
                 "graphics.pcie_slots": {"$elemMatch": {"$regex": cpu_pcie}}
             })
 
-            # Crea una lista con le MOBO compatibili
             motherboards = [{"_id": str(item["_id"]), "name": item["name"]} for item in compatible_motherboards]
 
-            # Trova tutti i dissipatori compatibili
             compatible_coolers = mongo.db.components.find({
                 "type": "COOLING",
-                "socket_compatibility": {"$in": [cpu_socket]},  # Socket compatibile
-                "tdp_support": {"$gte": cpu_tdp}  # TDP supportato dal dissipatore maggiore o uguale al TDP della CPU
+                "socket_compatibility": {"$in": [cpu_socket]},
+                "tdp_support": {"$gte": cpu_tdp}
             })
 
-            # Crea una lista con i dissipatori compatibili
             coolers = [{"_id": str(item["_id"]), "name": item["name"]} for item in compatible_coolers]
 
-            # Se la CPU ha una soluzione termica integrata, aggiungi l'opzione "None"
             if cpu_thermal_solution:
                 coolers.insert(0, {"_id": "none_col", "name": "None"})
 
-            # Restituisci i dati in formato JSON
             return jsonify({"motherboards": motherboards, "coolers": coolers})
 
         except Exception as e:
@@ -109,8 +100,7 @@ def register_routes(app, mongo):
                 "type": "RAM",
                 "memory_type": mobo_memory_type,
                 "memory_speed": {
-                    "$lte": min(cpu_memory4_speed,
-                                mobo_max_memory_speed) if cpu_memory4_speed > 0 else cpu_memory5_speed
+                    "$lte": min(cpu_memory4_speed, mobo_max_memory_speed) if cpu_memory4_speed else cpu_memory5_speed
                 }
             })
 
@@ -156,9 +146,7 @@ def register_routes(app, mongo):
                 return jsonify({"error": "CPU or GPU not found"}), 404
 
             # Calcola il fabbisogno energetico
-            cpu_tdp = selected_cpu.get("tdp", 0)
-            gpu_tdp = selected_gpu.get("tdp", 0)
-            required_power = cpu_tdp + gpu_tdp + 300
+            required_power = selected_cpu.get("tdp", 0) + selected_gpu.get("tdp", 0) + 300
 
             # Trova tutti i PSU compatibili
             compatible_psu = mongo.db.components.find({
