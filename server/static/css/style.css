@@ -1,18 +1,18 @@
 /* Palette */
 :root {
-    --background-color: #1a2238; /* Blu cobalto scuro */
-    --accent-color: #a9b1bc; /* Argento per testo e dettagli */
-    --text-color: #d1d5db; /* Grigio chiaro per il testo */
-    --shadow-color: rgba(0, 0, 0, 0.25); /* Ombra delicata */
+    --background-color: #1a2238;  /* Dark cobalt blue */
+    --accent-color: #a9b1bc;  /* Silver for text and details */
+    --text-color: #d1d5db; /* Light grey for text */
+    --shadow-color: rgba(0, 0, 0, 0.25); /* Delicate shadow */
 }
 
 /* Body */
 html, body {
-    height: 100%; /* La pagina occupa l'intera altezza della finestra */
+    height: 100%; /* The page takes up the entire height of the window */
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Layout a colonne */
+    flex-direction: column; /* Column Layout */
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: Arial, sans-serif;
@@ -42,7 +42,7 @@ header h1:hover {
 
 /* Main content */
 main {
-    flex: 1; /* Riempie lo spazio disponibile */
+    flex: 1; /* fills the available space */
     text-align: justify;
     padding: 20px;
     max-width: 800px;
