@@ -1,15 +1,16 @@
+
 :root {
-    --background-color: #1a2238; /* Blu cobalto scuro */
-    --accent-color: #a9b1bc; /* Argento per testo e dettagli */
-    --text-color: #d1d5db; /* Grigio chiaro per il testo */
-    --dropdown-bg: #2a3656; /* Blu scuro per il dropdown */
-    --hover-color: #3f4c6b; /* Blu più chiaro per hover */
-    --shadow-color: rgba(0, 0, 0, 0.25); /* Ombra delicata */
+    --background-color: #1a2238; /* Dark cobalt blue */
+    --accent-color: #a9b1bc; /* Silver for text and details */
+    --text-color: #d1d5db; /* Light grey for text */
+    --dropdown-bg: #2a3656; /* Dark blue for dropdown */
+    --hover-color: #3f4c6b; /* Lighter blue for hover */
+    --shadow-color: rgba(0, 0, 0, 0.25); /* Delicate shadow */
 }
 
 .navbar {
     background-color: var(--background-color);
-    height: 80px;
+    height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,13 +21,13 @@
 .navbar h1.logo {
     display: flex;
     align-items: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--text-color);
     margin: 0;
 }
 
 .logo_img {
-    width: 35px;
+    width: 45px;
     height: auto;
     margin-right: 10px;
     margin-left: 10px;
@@ -34,5 +35,7 @@
 
 .logo {
     color: var(--text-color);
-    font-size: 30px;
+    font-size: 35px;
 }
+
+
