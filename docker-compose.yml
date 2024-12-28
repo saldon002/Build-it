@@ -9,12 +9,11 @@ services:
     ports:
       - "5000:5000"  # Map port 5000 on the host to port 5000 in the container
     environment:
-      - FLASK_APP=server/app.py  # Specify the entry point of the Flask application
-      - FLASK_ENV=development  # Enable development mode for Flask
       - MONGO_URI=mongodb://mongodb:27017/mydatabase
       - SECRET_KEY=mysecretkey
     depends_on:
       - mongodb  # Ensure MongoDB is started before the Flask app to avoid connection issues
+    command: gunicorn -w 4 -b 0.0.0.0:5000 server.app:app  # Use Gunicorn for production
 
   # MongoDB configuration
   mongodb:
