@@ -49,6 +49,7 @@ main {
     margin: 40px auto;
     text-align: center;
     color: var(--text-color);
+    font-size: 1.25rem;
 }
 
 /* Footer */
