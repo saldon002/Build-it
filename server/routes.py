@@ -105,6 +105,7 @@ def register_routes(app, mongo):
             mobo_m2_slots = selected_mobo.get("supported_storage", {}).get("m_2_slots", 0)
             mobo_sata_ports = selected_mobo.get("supported_storage", {}).get("sata_ports", 0)
 
+
             # MongoDB Query to Find compatible RAM
             compatible_ram = mongo.db.components.find({
                 "type": "RAM",
@@ -121,16 +122,26 @@ def register_routes(app, mongo):
             })
 
             # MongoDB Query to Find compatible storage devices
-            compatible_storage = mongo.db.components.find({
-                "type": "Storage",
-                "$or": [
-                    {"interface": "M.2 NVMe", mobo_m2_slots: {"$gt": 0}},
-                    {"interface": "SATA", mobo_sata_ports: {"$gt": 0}}
-                ]
-            })
+            if mobo_sata_ports > 0 or mobo_m2_slots > 0:
+                # Initialize the query with the 'Storage' type and an empty $or array
+                query = {"type": "Storage", "$or": []}
+
+                # Add the condition for SATA if there are SATA ports available
+                if mobo_sata_ports > 0:
+                    query["$or"].append({"interface": "SATA"})
+
+                # Add the condition for M.2 NVMe if there are M.2 slots available
+                if mobo_m2_slots > 0:
+                    query["$or"].append({"interface": "M.2 NVMe"})
+
+                # Execute the combined query and convert the cursor to a list
+                compatible_storage = list(mongo.db.components.find(query))
+
+            else:
+                compatible_storage = []
 
             # Prepare the list of compatible components
-            rams = [{"_id": str(ram["_id"]), "name": ram["name"]} for ram in compatible_ram]
+            rams = [{"_id": str(item["_id"]), "name": item["name"]} for item in compatible_ram]
             gpus = [{"_id": str(item["_id"]), "name": item["name"]} for item in compatible_gpus]
             storages = [{"_id": str(item["_id"]), "name": item["name"]} for item in compatible_storage]
 
@@ -138,7 +149,7 @@ def register_routes(app, mongo):
             if cpu_integrated_gpu:
                 gpus.insert(0, {"_id": "none_gpu", "name": "None"})
 
-            return jsonify({"rams": rams, "gpus": gpus, "storage": storages})
+            return jsonify({"rams": rams, "gpus": gpus, "storages": storages})
 
         except Exception as e:
             return jsonify({"error": str(e)}), 500
@@ -147,15 +158,23 @@ def register_routes(app, mongo):
     @app.route('/api/get_compatible_psu/<cpu_id>/<gpu_id>', methods=['GET'])
     def get_compatible_psu(cpu_id, gpu_id):
         try:
-            # Find the selected CPU and GPU by their ObjectIds
+            # Find the selected CPU by its ObjectId
             selected_cpu = mongo.db.components.find_one({"_id": ObjectId(cpu_id), "type": "CPU"})
-            selected_gpu = mongo.db.components.find_one({"_id": ObjectId(gpu_id), "type": "GPU"})
 
-            if not selected_cpu or not selected_gpu:
-                return jsonify({"error": "CPU or GPU not found"}), 404
+            if not selected_cpu:
+                return jsonify({"error": "CPU not found"}), 404
 
-            # Calculate the required power (sum of TDPs + some overhead)
-            required_power = selected_cpu.get("tdp", 0) + selected_gpu.get("tdp", 0) + 300
+            # If GPU is 'none_gpu', only use CPU's TDP for wattage calculation
+            if gpu_id != "none_gpu":
+                # Find the selected GPU by its ObjectId
+                selected_gpu = mongo.db.components.find_one({"_id": ObjectId(gpu_id), "type": "GPU"})
+
+                if not selected_gpu:
+                    return jsonify({"error": "GPU not found"}), 404
+
+                required_power = selected_cpu.get("tdp", 0) + selected_gpu.get("tdp", 0) + 300
+            else:
+                required_power = selected_cpu.get("tdp", 0) + 300
 
             # MongoDB Query to Find compatible PSUs
             compatible_psu = mongo.db.components.find({
@@ -177,24 +196,30 @@ def register_routes(app, mongo):
         try:
             # Retrieve the selected motherboard, GPU, and PSU by their ObjectIds
             selected_mobo = mongo.db.components.find_one({"_id": ObjectId(mobo_id), "type": "MOBO"})
-            selected_gpu = mongo.db.components.find_one({"_id": ObjectId(gpu_id), "type": "GPU"})
+            selected_gpu = mongo.db.components.find_one({"_id": ObjectId(gpu_id), "type": "GPU"}) if gpu_id != "none_gpu" else None
             selected_psu = mongo.db.components.find_one({"_id": ObjectId(psu_id), "type": "PSU"})
 
-            if not selected_mobo or not selected_gpu or not selected_psu:
-                return jsonify({"error": "MOBO, GPU, or PSU not found"}), 404
+            if not selected_mobo or not selected_psu:
+                return jsonify({"error": "MOBO or PSU not found"}), 404
 
             # Extract attributes for case compatibility
             mobo_form_factor = selected_mobo.get("form_factor")
-            gpu_length = selected_gpu.get("dimensions", {}).get("length")
             psu_form_factor = selected_psu.get("form_factor")
 
-            # MongoDB Query to Find compatible cases
-            compatible_cases = mongo.db.components.find({
+            # Build the query for compatible cases
+            query = {
                 "type": "CASE",
                 "motherboard_compatibility": {"$in": [mobo_form_factor]},
-                "max_gpu_length": {"$gte": gpu_length},
                 "psu_compatibility": {"$in": [psu_form_factor]}
-            })
+            }
+
+            # If the GPU is not "none_gpu", add GPU compatibility to the query
+            if selected_gpu:
+                gpu_length = selected_gpu.get("dimensions", {}).get("length")
+                query["max_gpu_length"] = {"$gte": gpu_length}
+
+            # MongoDB Query to find compatible cases
+            compatible_cases = mongo.db.components.find(query)
 
             # Prepare the list of compatible cases
             cases = [{"_id": str(case["_id"]), "name": case["name"]} for case in compatible_cases]
