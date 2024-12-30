@@ -1,7 +1,7 @@
 // Main function to handle loading of compatible components based on selected component type
 function loadCompatibleComponents(selectElement) {
-    var componentType = $(selectElement).attr('id'); // Get the type of the component
-    var selectedValue = $(selectElement).val(); // Get the selected value from the dropdown
+    const componentType = $(selectElement).attr('id'); // Get the type of the component
+    const selectedValue = $(selectElement).val(); // Get the selected value from the dropdown
 
     if (!selectedValue) {
         console.warn("No value selected for:", componentType); // Log a warning if no value is selected
@@ -29,7 +29,7 @@ function loadCompatibleComponents(selectElement) {
 
 // Function to load compatible motherboards and coolers based on the selected CPU
 function loadCompatibleMoboCooling() {
-    var selectedCPU = $('#cpu').val(); // Get the selected CPU
+    const selectedCPU = $('#cpu').val(); // Get the selected CPU
 
     if (selectedCPU) {
         $.ajax({
@@ -50,8 +50,8 @@ function loadCompatibleMoboCooling() {
 
 // Function to load compatible RAM, GPU, and storage components based on the selected CPU and motherboard
 function loadCompatibleRamGpuStorage() {
-    var selectedCPU = $('#cpu').val(); // Get the selected CPU
-    var selectedMOBO = $('#mobo').val(); // Get the selected motherboard
+    const selectedCPU = $('#cpu').val(); // Get the selected CPU
+    const selectedMOBO = $('#mobo').val(); // Get the selected motherboard
 
     if (selectedCPU && selectedMOBO) {
         $.ajax({
@@ -73,8 +73,8 @@ function loadCompatibleRamGpuStorage() {
 
 // Function to load compatible PSU based on the selected CPU and GPU
 function loadCompatiblePSU() {
-    var selectedCPU = $('#cpu').val(); // Get the selected CPU
-    var selectedGPU = $('#gpu').val(); // Get the selected GPU
+    const selectedCPU = $('#cpu').val(); // Get the selected CPU
+    const selectedGPU = $('#gpu').val(); // Get the selected GPU
 
     if (selectedCPU && selectedGPU) {
         $.ajax({
@@ -94,9 +94,9 @@ function loadCompatiblePSU() {
 
 // Function to load compatible cases based on the selected motherboard, GPU, and PSU
 function loadCompatibleCases() {
-    var selectedMOBO = $('#mobo').val();
-    var selectedGPU = $('#gpu').val();
-    var selectedPSU = $('#psu').val();
+    const selectedMOBO = $('#mobo').val();
+    const selectedGPU = $('#gpu').val();
+    const selectedPSU = $('#psu').val();
 
     if (selectedMOBO && selectedGPU && selectedPSU) {
         $.ajax({
