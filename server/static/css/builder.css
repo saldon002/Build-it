@@ -1,15 +1,15 @@
 #selected-components-container {
     margin-top: 20px;
     padding: 20px;
-    background-color: var(--background-color);  /* Usa il blu cobalto scuro */
+    background-color: var(--background-color);  /* Use dark cobalt blue */
     border-radius: 8px;
-    box-shadow: 0 4px 8px var(--shadow-color);  /* Ombra delicata */
-    position: relative;  /* Assicurati che il contenitore possa adattarsi agli elementi esterni */
+    box-shadow: 0 4px 8px var(--shadow-color);  /* Delicate shadow */
+    position: relative;  /* Make sure the container can accommodate external elements */
 }
 
 #selected-components-container h3 {
     font-size: 1.5em;
-    color: var(--accent-color);  /* Usa il colore dell'accento */
+    color: var(--accent-color); /* Use accent color */
     margin-bottom: 15px;
 }
 
@@ -17,33 +17,58 @@
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: none;  /* Rimuovi la limitazione sull'altezza */
+    max-height: none;  /* Remove height restriction */
 }
 
 #selected-components-list li {
-    background-color: #2a3656;  /* Blu scuro per il background degli item */
+    background-color: #2a3656;  /* Dark blue for item background */
     margin: 8px 0;
     padding: 12px;
     border-radius: 6px;
-    border: 1px solid #3f4c6b;  /* Blu più chiaro per il bordo */
+    border: 1px solid #3f4c6b;  /* Lighter blue for the border */
     font-size: 1.1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s;  /* Solo la transizione per il colore di hover */
+    transition: background-color 0.3s;  /* Only the transition for the hover color */
 }
 
 #selected-components-list li:hover {
-    background-color: var(--hover-color);  /* Usa il blu più chiaro per l'hover */
+    background-color: var(--hover-color); /* Use lighter blue for hover */
 }
 
 #selected-components-list li strong {
     font-weight: bold;
-    color: var(--accent-color);  /* Usa il colore dell'accento per il nome del componente */
+    color: var(--accent-color);  /* Use accent color for component name */
 }
 
-/* Rimuovi il max-height e overflow, così la lista non sarà limitata in altezza */
+/* Remove max-height and overflow, so the list will not be limited in height */
 #selected-components-list {
     max-height: none;
     overflow-y: visible;
 }
+
+/* */
+
+
+/* Style for the progress bar */
+#progress-bar {
+    width: 0%;
+    transition: width 0.4s ease-in-out;
+}
+
+/* Form container */
+.component-form-container {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+   }
+
+   /* Hidden container of selected components */
+
+    #selected-components-container {
+        display: none;
+    }
+
+
