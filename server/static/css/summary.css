@@ -5,11 +5,11 @@
 }
 
 #selected-components-list li {
-    background-color: #2a3656; /* Blu scuro per ogni componente */
+    background-color: #2a3656; /* Dark blue for each component */
     padding: 12px 20px;
     border-radius: 8px;
     margin-bottom: 15px;
-    color: var(--text-color); /* Grigio chiaro per il testo */
+    color: var(--text-color); /* Light grey for text */
     font-size: 1.1rem;
     display: flex;
     justify-content: space-between;
@@ -17,10 +17,10 @@
     box-shadow: 0 4px 6px var(--shadow-color);
 }
 
-/* Pulsante a destra */
+/* Right button */
 #selected-components-list li button {
-    background-color: var(--accent-color); /* Argento per il bottone */
-    color: var(--background-color); /* Colore del testo sul bottone */
+    background-color: var(--accent-color); /* Silver for the button */
+    color: var(--background-color); /* Text color on the button */
     border: none;
     padding: 8px 15px;
     font-size: 1rem;
@@ -30,10 +30,10 @@
 }
 
 #selected-components-list li button:hover {
-    background-color: #3f4c6b; /* Colore hover blu più chiaro */
+    background-color: #3f4c6b; /* Lighter blue hover color */
 }
 
-/* Messaggio quando non ci sono componenti selezionati */
+/* Message when no components are selected */
 #selected-components-container p {
     color: #e74c3c;
     font-size: 1.2rem;
@@ -41,7 +41,7 @@
     padding: 20px;
 }
 
-/* Media queries per dispositivi mobili */
+/* Media queries for mobile devices */
 @media (max-width: 768px) {
     .component-item {
         flex-direction: column;
@@ -49,7 +49,7 @@
         padding: 10px;
     }
 
-    /* Adattiamo il bottone in un blocco su dispositivi più piccoli */
+    /* Let's adapt the button into a block on smaller devices */
     .btn-search-amazon {
         width: 100%;
         margin-left: 0;
@@ -58,7 +58,7 @@
     }
 }
 
-/* Media queries per schermi molto piccoli (es. smartphone) */
+/* Media queries for very small screens (e.g. smartphones) */
 @media (max-width: 480px) {
     .component-item {
         padding: 8px;
