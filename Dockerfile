@@ -20,5 +20,5 @@ ENV FLASK_ENV=development
 # Allows access to Flask on port 5000 from outside the container
 EXPOSE 5000
 
-# Set the default command to run Gunicorn
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "server.app:app"]
+# Set the default command to run Flask in development mode when the container starts
+CMD ["flask", "run", "--host=0.0.0.0"]
